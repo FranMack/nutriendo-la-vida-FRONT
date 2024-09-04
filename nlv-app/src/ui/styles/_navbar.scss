@@ -1,0 +1,90 @@
+@import "../../styles//variables.scss";
+
+nav{
+    width: 100vw;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .navbar-left-container{
+        width: 80%;
+        margin-left: 3%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+   
+
+        >.logo-container{
+            height: 80%;
+            display: flex;
+            img{
+                object-fit:cover ;
+                height: 100%;
+            }
+        }
+    
+        .navbar-menu{
+            font-size: 1.6rem;
+            display: flex;
+            width: fit-content;
+            margin-left: 10vh;
+            margin-right: 5vh;
+            justify-content: space-evenly;
+            column-gap: 5vw;
+            list-style: none;
+            text-transform: uppercase;
+            font-weight: 200;
+    
+           
+            a{
+                text-decoration: none;
+                color:$color_cyan;
+            }
+        }
+
+        >.icon-container{
+            position: relative;
+
+            height:35%;
+            svg{
+                path{
+                    stroke:$color_cyan
+                }
+            }
+            strong{
+                position: absolute;
+                top: 0%;
+                width: 1.5rem;
+               aspect-ratio: 1;
+                font-size: 1.4rem;
+                color: #ffff;
+                background-color: $color_cyan;
+                border-radius: 50%;
+                margin: 0 auto;
+                padding: 5%;
+                text-align: center;
+        
+                
+            }
+            
+        }
+    }
+
+   
+
+    .navbar-button{
+        margin-right: 4%;
+        background-color: $color_purple;
+        font-size: 1.4rem;
+        color:$color_background;
+        border: none;
+        padding: 0.6%;
+        padding-inline: 2%;
+        border-radius: 30px;
+
+       
+       
+    }
+}
