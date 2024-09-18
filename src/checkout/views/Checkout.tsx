@@ -1,32 +1,31 @@
-import { useContext, useEffect, useState } from "react";
-import logoMp from "../assets/mercado_pago_logo.png";
-import { DeleteIcon } from "../../assets/icons";
-import { ShopingCartContext } from "../../context/shopingCart.context";
-import { useFormik } from "formik";
-import * as Yup from "yup";
 import axios from "axios";
-import { envs } from "../../config/envs";
+import { useFormik } from "formik";
+import { useContext, useEffect, useState } from "react";
 import BeatLoader from "react-spinners/BeatLoader";
-import { ScreenSizeContext } from "../../context/screenSize.context";
+import * as Yup from "yup";
+import { DeleteIcon } from "../../assets/icons";
+import { envs } from "../../config/envs";
 import { MobileMenuContext } from "../../context/mobileMenuContext";
+import { ScreenSizeContext } from "../../context/screenSize.context";
+import { ShopingCartContext } from "../../context/shopingCart.context";
+import logoMp from "../assets/mercado_pago_logo.png";
 
 export const Checkout = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const { screenWidth } = useContext(ScreenSizeContext);
 
-  useEffect(()=>{
-    window.scrollTo(0,0)
-  },[])
-  const[isLoading,setIsLoading]=useState<boolean>(false)
-  const{screenWidth}=useContext(ScreenSizeContext)
-
-  const[step,setStep]=useState<string>("resume")
-  const nextStep=()=>{
-    setStep("finalForm")
-  }
+  const [step, setStep] = useState<string>("resume");
+  const nextStep = () => {
+    setStep("finalForm");
+  };
 
   const { shopingCartItems, setShopingCartItems } =
     useContext(ShopingCartContext);
 
-    const {menuOpen}=useContext(MobileMenuContext)
+  const { menuOpen } = useContext(MobileMenuContext);
 
   const totalPrice = () => {
     if (shopingCartItems.length === 0) {
@@ -63,8 +62,6 @@ export const Checkout = () => {
     setShopingCartItems(shopingCartUpdated);
   };
 
-  const [errorMessage, setErrorMessage] = useState<string>("");
-
   const singUpForm = useFormik({
     initialValues: {
       name: "",
@@ -87,7 +84,7 @@ export const Checkout = () => {
     }),
 
     onSubmit: async (values) => {
-      setIsLoading(true)
+      setIsLoading(true);
       const buyerInfo = {
         name: values.name,
         lastname: values.lastname,
@@ -121,107 +118,117 @@ export const Checkout = () => {
 
   console.log("xxxxxxxxxxx", shopingCartItems);
   return (
-    <section className={ menuOpen ? "mobileModalOpen checkout-container":"checkout-container" }>
+    <section
+      className={
+        menuOpen ? "mobileModalOpen checkout-container" : "checkout-container"
+      }
+    >
       <h2>INICIO / PLANES / TIENDA / MI CARRITO / CHECKOUT</h2>
       <div className="checkout-center-container">
-        {(screenWidth>= 1024 || step==="finalForm") && <div className="checkout-internal-container">
-          <form onSubmit={singUpForm.handleSubmit}>
-            <h3>Tus datos</h3>
+        {(screenWidth >= 1024 || step === "finalForm") && (
+          <div className="checkout-internal-container">
+            <form onSubmit={singUpForm.handleSubmit}>
+              <h3>Tus datos</h3>
 
-            <label htmlFor="">
-              Nombre
-              <input
-                className={
-                  singUpForm.touched.name && singUpForm.errors.name
-                    ? "input-error"
-                    : ""
-                }
-                type="text"
-                required
-                value={singUpForm.values.name}
-                onChange={singUpForm.handleChange}
-                onBlur={singUpForm.handleBlur}
-                id="name"
-              />
-              {singUpForm.touched.name && singUpForm.errors.name && (
-                <p>{singUpForm.errors.name}</p>
-              )}
-            </label>
-            <label htmlFor="">
-              Apellido
-              <input
-                type="text"
-                className={
-                  singUpForm.touched.lastname && singUpForm.errors.lastname
-                    ? "input-error"
-                    : ""
-                }
-                required
-                value={singUpForm.values.lastname}
-                onChange={singUpForm.handleChange}
-                onBlur={singUpForm.handleBlur}
-                id="lastname"
-              />
-              {singUpForm.touched.lastname && singUpForm.errors.lastname && (
-                <p>{singUpForm.errors.lastname}</p>
-              )}
-            </label>
-            <label htmlFor="">
-              Email
-              <input
-                type="email"
-                className={
-                  singUpForm.touched.email && singUpForm.errors.email
-                    ? "input-error"
-                    : ""
-                }
-                required
-                value={singUpForm.values.email}
-                onChange={singUpForm.handleChange}
-                onBlur={singUpForm.handleBlur}
-                id="email"
-              />
-              {singUpForm.touched.email && singUpForm.errors.email && (
-                <p>{singUpForm.errors.email}</p>
-              )}
-            </label>
-            <label htmlFor="">
-              Telefono
-              <input
-                type="text"
-                className={
-                  singUpForm.touched.phone && singUpForm.errors.phone
-                    ? "input-error"
-                    : ""
-                }
-                id="phone"
-                value={singUpForm.values.phone}
-                onChange={singUpForm.handleChange}
-                onBlur={singUpForm.handleBlur}
-              />
-              {singUpForm.touched.phone && singUpForm.errors.phone && (
-                <p>{singUpForm.errors.phone}</p>
-              )}
-            </label>
+              <label htmlFor="">
+                Nombre
+                <input
+                  className={
+                    singUpForm.touched.name && singUpForm.errors.name
+                      ? "input-error"
+                      : ""
+                  }
+                  type="text"
+                  required
+                  value={singUpForm.values.name}
+                  onChange={singUpForm.handleChange}
+                  onBlur={singUpForm.handleBlur}
+                  id="name"
+                />
+                {singUpForm.touched.name && singUpForm.errors.name && (
+                  <p>{singUpForm.errors.name}</p>
+                )}
+              </label>
+              <label htmlFor="">
+                Apellido
+                <input
+                  type="text"
+                  className={
+                    singUpForm.touched.lastname && singUpForm.errors.lastname
+                      ? "input-error"
+                      : ""
+                  }
+                  required
+                  value={singUpForm.values.lastname}
+                  onChange={singUpForm.handleChange}
+                  onBlur={singUpForm.handleBlur}
+                  id="lastname"
+                />
+                {singUpForm.touched.lastname && singUpForm.errors.lastname && (
+                  <p>{singUpForm.errors.lastname}</p>
+                )}
+              </label>
+              <label htmlFor="">
+                Email
+                <input
+                  type="email"
+                  className={
+                    singUpForm.touched.email && singUpForm.errors.email
+                      ? "input-error"
+                      : ""
+                  }
+                  required
+                  value={singUpForm.values.email}
+                  onChange={singUpForm.handleChange}
+                  onBlur={singUpForm.handleBlur}
+                  id="email"
+                />
+                {singUpForm.touched.email && singUpForm.errors.email && (
+                  <p>{singUpForm.errors.email}</p>
+                )}
+              </label>
+              <label htmlFor="">
+                Telefono
+                <input
+                  type="text"
+                  className={
+                    singUpForm.touched.phone && singUpForm.errors.phone
+                      ? "input-error"
+                      : ""
+                  }
+                  id="phone"
+                  value={singUpForm.values.phone}
+                  onChange={singUpForm.handleChange}
+                  onBlur={singUpForm.handleBlur}
+                />
+                {singUpForm.touched.phone && singUpForm.errors.phone && (
+                  <p>{singUpForm.errors.phone}</p>
+                )}
+              </label>
 
-            <div className="mp-info-container">
-              <div className="image-container">
-                <img src={logoMp} alt="logo mercado pago" />
+              <div className="mp-info-container">
+                <div className="image-container">
+                  <img src={logoMp} alt="logo mercado pago" />
+                </div>
+                <div className="info-container">
+                  <h3>Pago seguro</h3>
+                  <p>
+                    Para completar la transacción, te enviaremos a los
+                    servidores seguros de Mercadopago.
+                  </p>
+                </div>
               </div>
-              <div className="info-container">
-                <h3>Pago seguro</h3>
-                <p>
-                Para completar la transacción, te enviaremos a los
-                servidores seguros de Mercadopago.
-                </p>
-              </div>
-            </div>
 
-            <button type="submit">
-              {isLoading? <BeatLoader color={"white"} speedMultiplier={0.4}/> :"Continuar"}
-            </button>
-          </form>
-        </div>}
+              <button type="submit">
+                {isLoading ? (
+                  <BeatLoader color={"white"} speedMultiplier={0.4} />
+                ) : (
+                  "Continuar"
+                )}
+              </button>
+            </form>
+          </div>
+        )}
         <div className="checkout-internal-container">
           <div className="resume-container">
             <h3>Resumén del pedido</h3>
@@ -269,9 +276,12 @@ export const Checkout = () => {
             <p>TOTAL</p>
             <p>{`$${totalPrice()}`}</p>
           </div>
-          {(screenWidth<1024 && step==="resume") && <button className="next-step-button" onClick={nextStep}>Continuar</button>}
+          {screenWidth < 1024 && step === "resume" && (
+            <button className="next-step-button" onClick={nextStep}>
+              Continuar
+            </button>
+          )}
         </div>
-       
       </div>
     </section>
   );

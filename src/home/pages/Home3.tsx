@@ -1,24 +1,22 @@
-import React, { RefObject } from "react";
-import flower from "../assets/Soft Flower.png";
+import { RefObject } from "react";
+import { Breake } from "../../ui/components";
 import asterix from "../assets/Asterisk 1.png";
 import flower2 from "../assets/Flower.png";
-import arrowRight from "../assets/arrow_right.png";
+import flower from "../assets/Soft Flower.png";
 import arrowLeft from "../assets/arrow_left.png";
-import { Breake } from "../../ui/components";
+import arrowRight from "../assets/arrow_right.png";
 
 interface Home3Options {
   reference: RefObject<HTMLElement> | undefined;
 }
 
-export const Home3 = ({reference}:Home3Options) => {
+export const Home3 = ({ reference }: Home3Options) => {
   return (
     <section ref={reference} className="home-section3-container">
       <div className="home-section3-top-container efectoRevealOut">
         <h3>Te cuento cÓmo empezar</h3>
 
-        <h4>
-          Conocé como trabajaremos en conjunto
-        </h4>
+        <h4>Conocé como trabajaremos en conjunto</h4>
       </div>
 
       <div className="home-section3-center-container">

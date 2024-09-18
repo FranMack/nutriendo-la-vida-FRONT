@@ -1,32 +1,31 @@
 import { useNavigate } from "react-router-dom";
 import { CloseIcon, DeleteIcon } from "../../assets/icons";
 //import { Button } from "./Button";
+import { useContext } from "react";
 import { ShopingCartContext } from "../../context/shopingCart.context";
-import { useContext, useEffect, useState } from "react";
 import { ShopingCartItemOptions } from "../../Plans/views/Plan";
-
-
-
-
-
-
 
 export function ShopingCart() {
   const navigate = useNavigate();
 
-  const {toggleMenu,shopingCartItems, setShopingCartItems}=useContext(ShopingCartContext)
-
- 
+  const { toggleMenu, shopingCartItems, setShopingCartItems } =
+    useContext(ShopingCartContext);
 
   const totalPrice = () => {
     if (shopingCartItems.length === 0) {
       return 0; // Devuelve 0 si el carrito aún no ha cargado.
     }
-    const plansPrice= shopingCartItems.reduce((acc, item) => acc + item.price, 0);
-    const consultNumbers=shopingCartItems.filter((item)=>{return item.consult===true}).length
-    const total=plansPrice + consultNumbers * shopingCartItems[0].consultPrice;
+    const plansPrice = shopingCartItems.reduce(
+      (acc, item) => acc + item.price,
+      0
+    );
+    const consultNumbers = shopingCartItems.filter((item) => {
+      return item.consult === true;
+    }).length;
+    const total =
+      plansPrice + consultNumbers * shopingCartItems[0].consultPrice;
 
-    return total
+    return total;
   };
 
   const deleteShopingCartItem = (id: number) => {
@@ -44,16 +43,14 @@ export function ShopingCart() {
 
   const linkToCheckOut = () => {
     const shopingCartJSON = localStorage.getItem("shopingCart") || "[]";
-    const shopingCart:ShopingCartItemOptions[] = JSON.parse(shopingCartJSON);
-    if(shopingCart.length<1){
-        alert("Aún no has agregado productos al carrito")
-        return
+    const shopingCart: ShopingCartItemOptions[] = JSON.parse(shopingCartJSON);
+    if (shopingCart.length < 1) {
+      alert("Aún no has agregado productos al carrito");
+      return;
     }
     navigate("checkout");
     toggleMenu();
   };
-
-
 
   return (
     <div className="shoping-cart-conteiner shopingCartReveal">
@@ -84,7 +81,7 @@ export function ShopingCart() {
                 <h5>{item.product}</h5>
                 <div className="card-price-container">
                   <div className="item-price-container">
-                    <p>{item.product.includes("Ebook")?"Ebook":`Plan`}</p>
+                    <p>{item.product.includes("Ebook") ? "Ebook" : `Plan`}</p>
                     <strong>{`$ ${item.price}`}</strong>
                   </div>
 
@@ -97,7 +94,9 @@ export function ShopingCart() {
 
                   <div className="item-price-container">
                     <p>Subtotal</p>
-                    <strong>{`$ ${item.price +( item.consult ? item.consultPrice:0) }`}</strong>
+                    <strong>{`$ ${
+                      item.price + (item.consult ? item.consultPrice : 0)
+                    }`}</strong>
                   </div>
                 </div>
               </div>
@@ -116,7 +115,6 @@ export function ShopingCart() {
         <button onClick={linkToCheckOut}>COMPRAR</button>
         <button onClick={toggleMenu}>SEGUIR NAVEGANDO</button>
 
-       
         <hr />
       </div>
     </div>
