@@ -28,8 +28,8 @@ export const MobileNavbar = () => {
         <img onClick={linkToHome} src={logoV} alt="logo-V" />
       </div>
 
-      <div className="icon-container" onClick={() => {}}>
-        <ShopingIcon onClick={shopingCartContext.toggleMenu} />
+      <div className="icon-container" onClick={shopingCartContext.toggleMenu}>
+        <ShopingIcon />
         {shopingCartItems.length > 0 && (
           <strong>{shopingCartItems.length}</strong>
         )}
