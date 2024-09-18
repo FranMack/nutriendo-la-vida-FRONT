@@ -46,18 +46,22 @@ export const QuestionaryTest = () => {
     navigate(`/test-result/${idPlan}`)
   }
   
+  const linkToHome=()=>{
+    navigate("/")
+  }
+  
 
 
  
 console.log("xxxxxxxxxxxxxxxx",plan)
   return (
-    <section className='questionary-container'>
+    <section className='questionary-container leftReveal'>
       { step===0 && <> <h2>¡Hola<br/>
 ¿No sabes cual plan es el más adecuado para vos?
 </h2>
 <h3>Con estas simples preguntas puedo ayudarte, no te va a llevar más de 5 minutos!</h3>
 <button onClick={nextStep}>Empezar test</button>
-<button className='button-trasparente'>Volver al inicio</button></>}
+<button className='button-trasparente' onClick={linkToHome}>Volver al inicio</button></>}
 
 {step===1 &&<QuestionComponent {...quetion1}/>}
 {step===2 &&<QuestionComponent {...quetion2}/>}
@@ -70,7 +74,7 @@ console.log("xxxxxxxxxxxxxxxx",plan)
 {step===9 &&<QuestionComponent {...quetion9}/>}
 {step===10 &&<QuestionComponent {...quetion10}/>}
 
-{ step===11 && <> <h2 className="result-title">!Todo listo
+{ step===11 && <> <h2 className="result-title">¡Todo listo!
 </h2>
 <h3 className="result-secundaryTitle">Tengo el plan que se adapta<br/> perfecto a vos</h3>
 <button onClick={()=>linkToPlan(plan)}>Ver resultado</button>

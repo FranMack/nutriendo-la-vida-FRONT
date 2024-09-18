@@ -1,13 +1,18 @@
+import { RefObject } from "react";
 import profile from "../assets/abril.png";
 
-export const Home2 = () => {
+interface Home2Options {
+  reference: RefObject<HTMLDivElement> | undefined;
+}
+
+export const Home2 = ({reference}:Home2Options) => {
   return (
-    <section id="me" className="home-section2-container">
-      <div className="home-section2-center-container">
-        <div className="image-container">
+    <section  id="me" className="home-section2-container">
+      <div ref={reference} className="home-section2-center-container  ">
+        <div className="image-container efectoRevealOut">
           <img src={profile} alt="profile-image" />
         </div>
-        <div className="text-container">
+        <div className="text-container efectoRevealOut">
           <h3>QuiEn soy</h3>
           <h4>
             Soy Abril Sack, especialista

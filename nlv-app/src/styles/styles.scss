@@ -4,12 +4,14 @@
 @import "../ui/styles/footer";
 @import "../ui//styles/shopingCart";
 @import "../ui/styles//mobileNavbar";
+@import "../ui/styles/mobileMenu";
 @import "../home//styles//home1";
 @import "../home//styles//home2";
 @import "../home//styles//home3";
 @import "../home//styles//home4";
 @import "../home//styles//home4b";
 @import "../home//styles//home5";
+@import"../home//styles/slider";
 @import "../Plans//styles/plan";
 @import "../Plans//styles/testResult";
 @import "../questonaryTest/styles/questionaryTest";
@@ -35,3 +37,134 @@ button,svg{
     cursor: pointer;
 }
 
+main{
+    overflow-x: hidden; 
+}
+
+.mobileModalOpen{
+    opacity:0.5;
+    pointer-events: none;
+
+}
+
+
+.efectoReveal {
+    animation-name: efectoReveal;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes efectoReveal {
+    from {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+
+  .efectoRevealOut {
+  animation-name: efectoRevealOut;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  overflow: hidden
+}
+
+@keyframes efectoRevealOut {
+  from {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+
+
+
+.leftReveal {
+    animation-name: leftReveal;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  
+@keyframes leftReveal {
+    from {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+
+  .rightReveal {
+    animation-name: rightReveal;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  
+@keyframes rightReveal {
+    from {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+
+
+  .topReveal {
+    animation-name: topReveal;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  
+@keyframes topReveal {
+    from {
+      transform: translatey(500px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+
+  .topRevealOut {
+    animation-name: topRevealOut;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  
+@keyframes topRevealOut {
+    from {
+      transform: translateY(0px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(500px);
+      opacity: 1;
+    }
+  }

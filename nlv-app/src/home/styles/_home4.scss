@@ -78,6 +78,15 @@ h5{
     color:$color_background;
     border-radius: 5px;
     border-color: transparent;
+    transition: 1s ease;
+  }
+  button:hover{
+    opacity: 0.8;
+    scale: 1.05;
+  }
+  button:active{
+    filter: brightness(1.1);
+   
   }
 }
 

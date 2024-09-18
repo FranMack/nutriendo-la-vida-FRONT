@@ -1,4 +1,4 @@
-import { Navbar,MobileNavbar } from "./ui/components";
+import { Navbar,MobileNavbar,MobileMenu } from "./ui/components";
 import { Home } from "./home/views/Home";
 import { Footer } from "./ui/components/Footer";
 import { Route, Routes } from "react-router-dom";
@@ -9,7 +9,9 @@ import { QuestionaryTest } from "./questonaryTest/views/QuestionaryTest";
 import { Checkout } from "./checkout/views/Checkout";
 import { ShopingCart } from "./ui/components/ShopingCart";
 import { ShopingCartContext } from "./context/shopingCart.context";
-import { useContext, useEffect, useState } from "react";
+import { ScreenSizeContext } from "./context/screenSize.context";
+import { useContext, useEffect } from "react";
+import { CheckoutRoute } from "./routes/CheckoutRoute";
 
 function App() {
 
@@ -21,12 +23,10 @@ function App() {
   },[])
 
 
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const{screenWidth,setScreenWidth}=useContext(ScreenSizeContext)
 
-  const handleWindowSize = () => {
-    setWindowSize(window.innerWidth);
-  };
-  window.addEventListener("resize", handleWindowSize);
+
+  window.addEventListener("resize", ()=>{setScreenWidth(window.innerWidth)});
 
 
 
@@ -34,9 +34,10 @@ function App() {
 
   return (
     <>
-  {windowSize>=1024 ? <Navbar />:<MobileNavbar/>}
+  {screenWidth>=1024 ? <Navbar />:<MobileNavbar/>}
    
      {shopingCartOpen && <ShopingCart/>}
+     <MobileMenu/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan/:id" element={<Plan />} />
@@ -45,7 +46,7 @@ function App() {
         <Route path="/test" element={<QuestionaryTest />} />
 
         {/*VER: Ruta a la que solo se pueda acceder si hay productos en el shopiincart */}
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<CheckoutRoute><Checkout /></CheckoutRoute>} />
 
 
       </Routes>

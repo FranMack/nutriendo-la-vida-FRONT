@@ -10,14 +10,14 @@
     right: 0;
     /* Estilo para la barra de desplazamiento */
   ::-webkit-scrollbar {
-    width: 10px; /* Ancho de la barra de desplazamiento */
+    width: 7px; /* Ancho de la barra de desplazamiento */
     
   }
   
   /* Estilo para el thumb (el botón que puedes arrastrar) de la barra de desplazamiento */
   ::-webkit-scrollbar-thumb {
-    display: none;
-    background-color:$color_cyan; /* Cambia "#color_primary" al color deseado */
+  
+    background-color:$color_orange; /* Cambia "#color_primary" al color deseado */
     border-radius: 5px; /* Radio de borde del dedo de la barra de desplazamiento */
     height: 10px;
   }
@@ -30,7 +30,7 @@
   /* Estilo para el rincón de la barra de desplazamiento */
   ::-webkit-scrollbar-corner {
     background-color: red; /* Cambia "red" al color deseado */
-    width: 20px;
+    width: 15px;
   }
   }
   
@@ -256,6 +256,28 @@
   @media screen and (max-width: 678px) {
     .shoping-cart-conteiner{
       width: 100vw;
+      
+    }
+
+    .shoping-cart-card-container {
+      width: 90%;
+      height: 35%;
+      margin: 0 auto;
+      display: flex;
+      background-color: $color_background;
+      img {
+        height: 100%;
+        aspect-ratio: 1;
+      }
+    
+      p {
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+      strong {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
     }
   }
   

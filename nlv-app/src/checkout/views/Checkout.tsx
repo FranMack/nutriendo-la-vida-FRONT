@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import logoMp from "../assets/mercado_pago_logo.png";
 import { DeleteIcon } from "../../assets/icons";
 import { ShopingCartContext } from "../../context/shopingCart.context";
@@ -7,14 +7,26 @@ import * as Yup from "yup";
 import axios from "axios";
 import { envs } from "../../config/envs";
 import BeatLoader from "react-spinners/BeatLoader";
+import { ScreenSizeContext } from "../../context/screenSize.context";
+import { MobileMenuContext } from "../../context/mobileMenuContext";
 
 export const Checkout = () => {
 
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const[isLoading,setIsLoading]=useState<boolean>(false)
+  const{screenWidth}=useContext(ScreenSizeContext)
 
+  const[step,setStep]=useState<string>("resume")
+  const nextStep=()=>{
+    setStep("finalForm")
+  }
 
   const { shopingCartItems, setShopingCartItems } =
     useContext(ShopingCartContext);
+
+    const {menuOpen}=useContext(MobileMenuContext)
 
   const totalPrice = () => {
     if (shopingCartItems.length === 0) {
@@ -109,10 +121,10 @@ export const Checkout = () => {
 
   console.log("xxxxxxxxxxx", shopingCartItems);
   return (
-    <section className="checkout-container">
+    <section className={ menuOpen ? "mobileModalOpen checkout-container":"checkout-container" }>
       <h2>INICIO / PLANES / TIENDA / MI CARRITO / CHECKOUT</h2>
       <div className="checkout-center-container">
-        <div className="checkout-internal-container">
+        {(screenWidth>= 1024 || step==="finalForm") && <div className="checkout-internal-container">
           <form onSubmit={singUpForm.handleSubmit}>
             <h3>Tus datos</h3>
 
@@ -199,8 +211,8 @@ export const Checkout = () => {
               <div className="info-container">
                 <h3>Pago seguro</h3>
                 <p>
-                  En unos segundos se te redigirá a la app de Mercado Pago para
-                  finalizar la compra.
+                Para completar la transacción, te enviaremos a los
+                servidores seguros de Mercadopago.
                 </p>
               </div>
             </div>
@@ -209,7 +221,7 @@ export const Checkout = () => {
               {isLoading? <BeatLoader color={"white"} speedMultiplier={0.4}/> :"Continuar"}
             </button>
           </form>
-        </div>
+        </div>}
         <div className="checkout-internal-container">
           <div className="resume-container">
             <h3>Resumén del pedido</h3>
@@ -257,7 +269,9 @@ export const Checkout = () => {
             <p>TOTAL</p>
             <p>{`$${totalPrice()}`}</p>
           </div>
+          {(screenWidth<1024 && step==="resume") && <button className="next-step-button" onClick={nextStep}>Continuar</button>}
         </div>
+       
       </div>
     </section>
   );

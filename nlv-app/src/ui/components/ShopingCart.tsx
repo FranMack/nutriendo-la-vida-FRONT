@@ -116,10 +116,7 @@ export function ShopingCart() {
         <button onClick={linkToCheckOut}>COMPRAR</button>
         <button onClick={toggleMenu}>SEGUIR NAVEGANDO</button>
 
-        <div className="shoping-cart-button-help-container">
-          <strong>Necesitas ayuda?</strong>
-          <p>Ver más</p>
-        </div>
+       
         <hr />
       </div>
     </div>

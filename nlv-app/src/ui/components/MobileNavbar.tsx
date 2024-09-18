@@ -1,9 +1,12 @@
 
+import { useContext } from "react"
 import { ShopingIcon,MenuIcon } from "../../assets/icons"
 import logoN from "../assets/logo-n.png"
 import logoV from "../assets/logo-v.png"
 
 import { useNavigate } from "react-router-dom"
+import { MobileMenuContext } from "../../context/mobileMenuContext"
+import { ShopingCartContext } from "../../context/shopingCart.context"
 
 export const MobileNavbar = () => {
 
@@ -14,11 +17,14 @@ export const MobileNavbar = () => {
     navigate("/")
   }
 
-
+ 
+  const {toggleMenu}=useContext(MobileMenuContext)
+  const shopingCartContext=useContext(ShopingCartContext)
+  const{shopingCartItems}=shopingCartContext
   return (
 <nav className='mobile-navbar-container'>
   <div className="icon-container" onClick={()=>{}}>
-    <MenuIcon/>
+    <MenuIcon onClick={toggleMenu}/>
   </div>
 
   <div className="image-container">
@@ -27,7 +33,8 @@ export const MobileNavbar = () => {
   </div>
 
   <div className="icon-container" onClick={()=>{}}>
-  <ShopingIcon/>
+  <ShopingIcon onClick={shopingCartContext.toggleMenu}/>
+  {shopingCartItems.length>0 && <strong>{shopingCartItems.length}</strong>}
   </div>
 
 

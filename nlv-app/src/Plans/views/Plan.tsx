@@ -129,7 +129,7 @@ export const Plan = () => {
 
   return (
     <section className="plan-container">
-      <div className="plan-center-container">
+      <div className="plan-center-container leftReveal ">
         <div className="plan-center-top-container">
           <h2>INICIO / PLANES / TIENDA</h2>
           <div className="buttons-container">
@@ -150,6 +150,7 @@ export const Plan = () => {
           <div className="plan-info-container">
             <h3>{plans[index - 1].title}</h3>
             <h4>{consultState()?`$${plans[index - 1].price} + $${plans[index - 1].consultPrice} `:`$ ${plans[index - 1].price}`}</h4>
+              <h4></h4>
             <button onClick={addToShopingCart}>Agregar al carrito</button>
             <button onClick={handleConsult} className="button-transparent">{consultState()?"Quitar consulta profesional":"Agregar consulta profesional"}</button>
             <div className="text-container">
@@ -157,6 +158,9 @@ export const Plan = () => {
               <p>
               {plans[index-1].paragraph}
               </p>
+              <br />
+              <p>
+                Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus habitos y métas. En 48-72 horas luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
             </div>
           </div>
         </div>

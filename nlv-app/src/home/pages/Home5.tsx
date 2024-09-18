@@ -2,7 +2,7 @@ import carrousel1 from "../assets/carrousel1.png";
 import carrousel2 from "../assets/carrousel2.png";
 import purpleBackground from "../assets/purpleBackground.png"
 import { ArrowLeft } from "../../assets/icons";
-import { useState } from "react";
+import { RefObject, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface CarruselData {
@@ -10,6 +10,10 @@ interface CarruselData {
   secundaryTitle: string;
   text: string;
   image: string;
+}
+
+interface Home2Options {
+  reference: RefObject<HTMLDivElement> | undefined;
 }
 
 const carrusel: CarruselData[] = [
@@ -30,7 +34,7 @@ const carrusel: CarruselData[] = [
 
  
 
-export const Home5 = () => {
+export const Home5 = ({reference}:Home2Options) => {
   const navigate=useNavigate()
 
   const linkToTest=()=>{
@@ -51,7 +55,7 @@ export const Home5 = () => {
   return (
     <section className="home-section5-container">
    
-          <div className={index%2 !==0 ? "carrpusel-container":"carrpusel-container carrpusel-container-reverse"}>
+          <div ref={reference} className={index%2 !==0 ? "carrpusel-container":"carrpusel-container carrpusel-container-reverse"}>
             <div className="home-section5-internal-container left">
                 <div className="text-container">
                 <h5>{carrusel[index].title}</h5>
@@ -59,7 +63,7 @@ export const Home5 = () => {
                 <p>{carrusel[index].text}</p>
                 </div>
             </div>
-            <div className="home-section5-internal-container right">
+            <div  className="home-section5-internal-container right ">
             <img src={carrusel[index].image} alt="april image" />
             </div>
             <div className="arrow-container left" onClick={nextIndex}>

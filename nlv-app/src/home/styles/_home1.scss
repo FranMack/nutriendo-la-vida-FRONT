@@ -63,6 +63,27 @@
 }
 
 
+.revealLogo {
+    animation-name: revealLogo;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes revealLogo {
+    from {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+
+
+
 @media screen and (max-width: 678px) {
 
   .home-section1-container {

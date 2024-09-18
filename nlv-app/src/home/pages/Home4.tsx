@@ -1,17 +1,28 @@
-import React from 'react'
+import React, { RefObject, useContext } from 'react'
 import { plans } from '../assets/plansData'
 import { useNavigate } from 'react-router-dom'
+import { PlansGrid } from '../components/PlansGrid'
+import { ScreenSizeContext } from '../../context/screenSize.context'
+import { Slider } from '../components/Slider'
 
-export const Home4 = () => {
+
+interface Home4Options {
+  reference: RefObject<HTMLElement> | undefined;
+}
+
+
+export const Home4 = ({reference}:Home4Options) => {
   const navigate=useNavigate();
 
   const linkTo=(path:string)=>{
     navigate(`/plan/${path}`)
   }
 
+  const{screenWidth}=useContext(ScreenSizeContext)
+
   return (
-    <section id="plans" className="home-section4-container">
-  <div className="home-section4-top-container">
+    <section ref={reference} id="plans" className="home-section4-container">
+  <div  className="home-section4-top-container efectoRevealOut">
         <h3>PLANES</h3>
 
         <h4>
@@ -22,23 +33,7 @@ export const Home4 = () => {
       </p>
       <p>  Todos los planes incluyen mediciones de porciones según tus requerimientos energéticos y proteicos, kit de menús saludables y deliciosas recetas para complementar tu cocina.</p>
       </div>
-      <div className='home-section4-plans-container'>
-        {plans.map((plan,i)=>{return(
-          <div key={plan.title} className={i%2 ===0 ?'home-section-card-container':'home-section-card-container move-to-bottom'} style={{backgroundColor:plan.backgroundColor}}>
-            <h4 style={{color:plan.color}}>
-              {plan.title}
-            </h4>
-            <ul style={{color:plan.color}}>{plan.items.map((item)=>{
-              return(<li>{item}</li>)
-            })}</ul>
-            <h5 style={{color:plan.color}}>{`$${plan.price}`}</h5>
-            <div className='buttons-container'>
-            <button onClick={()=>{linkTo(plan.id)}} style={{backgroundColor:plan.color}}>Lo quiero</button>
-     
-            </div>
-          </div>
-        )})}
-      </div>
+     {screenWidth>=1024?<PlansGrid plans={plans} linkTo={linkTo}/>:<Slider plans={plans} linkTo={linkTo}/>}
       
     </section>
   )

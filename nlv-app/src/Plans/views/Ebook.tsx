@@ -48,7 +48,7 @@ export const Ebook = () => {
 
   return (
     <section className="plan-container">
-      <div className="plan-center-container">
+      <div className="plan-center-container leftReveal">
         <div className="plan-center-top-container">
           <h2>INICIO / PLANES / TIENDA</h2>
       

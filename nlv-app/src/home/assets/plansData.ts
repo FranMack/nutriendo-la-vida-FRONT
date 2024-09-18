@@ -1,5 +1,5 @@
 
-interface PlanOptions{
+export interface PlanOptions{
 title:string,
 items:string[],
 price:number,

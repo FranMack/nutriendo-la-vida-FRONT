@@ -1,6 +1,6 @@
 import logoN from "../assets/logo-n.png";
 import logoV from "../assets/logo-v.png";
-import { MailIcon,WhatsUpIcon,InstagramIcon,FacebookIcon,Linkedin } from '../../assets/icons';
+import { MailIcon,WhatsUpIcon,InstagramIcon,FacebookIcon,LinkedinIcon } from '../../assets/icons';
 
 
 
@@ -37,7 +37,7 @@ export const Footer = () => {
         <div className='fotter-socialMedia-container'>
         <div className='socialMedia-container-item' onClick={linkToInta}><InstagramIcon/></div>
         <div className='socialMedia-container-item' onClick={linkToFacebook}><FacebookIcon/></div>
-        <div className='socialMedia-container-item' onClick={Linkedin}><Linkedin/></div>
+        <div className='socialMedia-container-item' onClick={linkToFacebook}><LinkedinIcon/></div>
         </div>
        </div>
        <div className='footer-bottom-container'>
