@@ -55,7 +55,7 @@ export const Home5 = ({reference}:Home2Options) => {
   return (
     <section className="home-section5-container">
    
-          <div ref={reference} className={index%2 !==0 ? "carrpusel-container":"carrpusel-container carrpusel-container-reverse"}>
+          <div ref={reference} className={index%2 !==0 ? "carrpusel-container":"carrpusel-container carrpusel-container-reverse "}>
             <div className="home-section5-internal-container left">
                 <div className="text-container">
                 <h5>{carrusel[index].title}</h5>

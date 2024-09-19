@@ -113,9 +113,18 @@
             border:none;
             color:$color_background;
             background-color: $color_green;
+            transition: 0.5s;
       
            
         }
+        button:hover{
+            opacity: 0.8;
+            scale: 1.05;
+          }
+          button:active{
+            filter: brightness(1.1);
+           
+          }
     }
 
     .carrpusel-container-reverse{
@@ -222,7 +231,7 @@
             row-gap: 3%;
             color:$color_background;
             text-align: center;
-            transform: translateY(-15vh);
+            transform: translateY(-22vh);
             img{
                 position:absolute;
                 object-fit:fill;

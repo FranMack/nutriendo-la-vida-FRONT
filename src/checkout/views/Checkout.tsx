@@ -84,6 +84,9 @@ export const Checkout = () => {
     }),
 
     onSubmit: async (values) => {
+      if(isLoading){
+        return
+      }
       setIsLoading(true);
       const buyerInfo = {
         name: values.name,
@@ -229,7 +232,7 @@ export const Checkout = () => {
             </form>
           </div>
         )}
-        <div className="checkout-internal-container">
+        <div className="checkout-internal-container left">
           <div className="resume-container">
             <h3>Resumén del pedido</h3>
 

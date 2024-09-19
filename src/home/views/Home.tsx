@@ -28,7 +28,7 @@ const refHome5 = useRef<HTMLDivElement>(null);
 window.addEventListener("scroll", scrollHandler);
 
 function scrollHandler(){
-  const triggerBottom = window.innerHeight * 0.9;
+  const triggerBottom = window.innerHeight;
   const home2=refHome2.current
   const[home2Left,home2Right]=Array.from(home2!.childNodes)
 
@@ -150,15 +150,11 @@ function scrollHandler(){
   if (home5) {
     const topCoordinates = home5.getBoundingClientRect().top;
 
-    if (topCoordinates*0.7 < triggerBottom) {
+    if (topCoordinates< triggerBottom) {
       home5.classList.add("topReveal");
-      home5.classList.remove("topRevealOut");
+     
 
-    } else if (topCoordinates > triggerBottom) {
-      home5.classList.remove("topReveal");
-      home5.classList.add("topRevealOut");
-
-    }
+    } 
   }
 
 
