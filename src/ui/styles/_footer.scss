@@ -19,7 +19,7 @@ footer{
 
         .footer-top-left-container{
             height: 100%;
-            width: 30%;
+            width: 35%;
             display: flex;
             justify-content: space-between;
            
@@ -37,8 +37,10 @@ footer{
                }
     
                 >.logo-container{
-                    width: 100%;
+                    width: fit-content;
                     height: 80%;
+                    display: flex;
+                    justify-content: center;
                     img{
                         object-fit: cover;
                         height: 100%;
@@ -61,11 +63,11 @@ footer{
                     width: 100%;
                     display: flex;
                     align-items: center;
-                    column-gap: 1.6rem;
+                    column-gap: 1.7rem;
                     cursor: pointer;
     
                     p{
-                        font-size: 1.6rem;
+                        font-size: 1.8rem;
                         color:$color_text1;
                     }
     
@@ -88,7 +90,8 @@ footer{
             height: 30%;
             aspect-ratio: 4;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            column-gap: 10%;
             cursor: pointer;
            
             .socialMedia-container-item{
@@ -99,6 +102,7 @@ footer{
     }
 
     .footer-bottom-container{
+        position: relative;
         width: 100%;
         height: 10vh;
         display: flex;
@@ -107,14 +111,173 @@ footer{
         p{
             font-size: 1.5rem;
         }
+        .zm-container{
+            position: absolute;
+            cursor: pointer;
+            right: 2%;
+            display: flex;
+            height: 50%;
+            align-items: center;
+            column-gap: 1vw;
+            img {
+                object-fit: cover;
+                height: 100%;
+            };
+
+        }
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+
+
+    footer{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $color_background;
+    
+        .footer-top-container{
+            margin-top: 0vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 80%;
+         
+    
+            .footer-top-left-container{
+                height: 50%;
+                width: fit-content;
+                display: flex;
+                column-gap: 5vw;
+                
+               
+    
+                .fotter-images-container{
+                    width: fit-content;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                   align-items: center;
+                   justify-content: center;
+                   h6{
+                    font-size: 1.8rem;
+                    color:$color_cyan;
+                    font-family: $font_titles;
+                   }
+        
+                    >.logo-container{
+                        width: fit-content;
+                        height: 70%;
+                        display: flex;
+                        justify-content: center;
+                        img{
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                    }
+        
+                  
+                }
+                .fotter-info-container{
+                    width: fit-content;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    row-gap: 12%;
+                    
+                    .info-container-item{
+                        height: 12%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 1.7rem;
+                        cursor: pointer;
+        
+                        p{
+                            font-size: 1.8rem;
+                            color:$color_text1;
+                        }
+        
+                    }
+                    h6{
+                        font-size: 2.2rem;
+                        color:$color_purple;
+                        font-weight: 400;
+                       
+                    }
+                   
+                }
+        
+    
+            }
+    
+           
+            .fotter-socialMedia-container{
+                width: fit-content;
+                height: 15%;
+                display: flex;
+                justify-content: center;
+                column-gap: 10%;
+                cursor: pointer;
+               
+                .socialMedia-container-item{
+                    background-color: $color_orange;
+                    border-radius: 50%;
+                }
+            }
+        }
+    
+        .footer-bottom-container{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            p{
+                font-size: 1.5rem;
+            }
+
+            .zm-container{
+                position: static;
+                cursor: pointer;
+                right: 2%;
+                display: flex;
+                height: 50%;
+                align-items: center;
+                column-gap: 1vw;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                };
+    
+            }
+        }
+    }
+    
+
+
+
+
+
+}
+
+    
+
+
 
 @media screen and (max-width: 678px) {
 
     footer{
     
-        height:90vh;
+        height:88vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -203,7 +366,8 @@ footer{
                 width: 50%;
                 height: 12%;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
+                column-gap: 10%;
                 cursor: pointer;
                
                 .socialMedia-container-item{
@@ -217,11 +381,29 @@ footer{
         .footer-bottom-container{
             width: 100%;
             height: 20%;
+
             display: flex;
+           flex-direction: column;
             justify-content: center;
             align-items: center;
+            row-gap: 15%;
             p{
-                font-size: 1.7rem;
+                font-size: 1.8rem;
+            }
+            .zm-container{
+                p{
+                    font-size: 1.7rem;
+                }
+                position: static;
+                display: flex;
+                height: 25%;
+                align-items: center;
+                column-gap: 2vw;
+                img {
+                    object-fit: cover;
+                    height: 100%;
+                };
+    
             }
         }
     }

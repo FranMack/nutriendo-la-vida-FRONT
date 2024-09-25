@@ -34,7 +34,7 @@ export const Home4 = ({ reference }: Home4Options) => {
           deliciosas recetas para complementar tu cocina.
         </p>
       </div>
-      {screenWidth >= 1024 ? (
+      {screenWidth > 1024 ? (
         <PlansGrid plans={plans} linkTo={linkTo} />
       ) : (
         <Slider plans={plans} linkTo={linkTo} />

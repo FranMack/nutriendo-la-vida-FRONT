@@ -12,6 +12,8 @@ import { ShopingCartContext } from "./context/shopingCart.context";
 import { ScreenSizeContext } from "./context/screenSize.context";
 import { useContext, useEffect } from "react";
 import { CheckoutRoute } from "./routes/CheckoutRoute";
+import { Slide, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -38,6 +40,21 @@ function App() {
    
      {shopingCartOpen && <ShopingCart/>}
      <MobileMenu/>
+     <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+bodyStyle={{fontSize:"1.5rem"}}
+transition={Slide}
+
+/>
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plan/:id" element={<Plan />} />

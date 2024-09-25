@@ -20,45 +20,42 @@
       font-family: "Mackinac";
     }
     h2 {
-        margin-top: 2%;
+      margin-top: 2%;
       font-size: 1.8rem;
       line-height: 2.5rem;
       font-weight: 400;
       margin-left: 20%;
       margin-right: 20%;
-
     }
   }
 
-  .home-section1-button-container{
+  .home-section1-button-container {
     margin-top: 3%;
     width: 50%;
     display: flex;
     justify-content: center;
     column-gap: 10%;
-    :last-child{
-        background-color: transparent;
-        color:$color_background;
+    :first-child {
+      background-color: transparent;
+      color: $color_background;
     }
 
-    button{
-        font-size: 1.6rem;
-        font-weight: 400;
-        padding: 2%;
-        padding-inline: 7%;
-        border-radius: 10px;
-        color:$color_orange;
-        border: solid 2px $color_background;
-        transition: 0.5s;
-       
+    button {
+      font-size: 1.6rem;
+      font-weight: 400;
+      padding: 2%;
+      padding-inline: 7%;
+      border-radius: 10px;
+      color: $color_orange;
+      border: solid 2px $color_background;
+      transition: 0.5s;
     }
-    button:hover{
+    button:hover {
       opacity: 0.8;
       scale: 1.05;
     }
-    button:active{
+    button:active {
       filter: brightness(1.1);
-     
     }
   }
 
@@ -71,30 +68,68 @@
   }
 }
 
-
 .revealLogo {
-    animation-name: revealLogo;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
+  animation-name: revealLogo;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes revealLogo {
+  from {
+    opacity: 0;
+    filter: blur(10px);
   }
-  
-  @keyframes revealLogo {
-    from {
-      opacity: 0;
-      filter: blur(10px);
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-section1-container {
+    height: 100vh;
+    padding-top: 12vh;
+
+    .home-section1-center-container {
+      width: 75%;
+      margin-left: 8%;
+      margin-right: 8%;
+      row-gap: 2vh;
+      h1 {
+        font-size: 3.5rem;
+      }
+      h2 {
+        margin-top: 2%;
+        font-size: 1.8rem;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
     }
-    to {
-      opacity: 1;
-      filter: blur(0);
+
+    .home-section1-button-container {
+      margin-top: 3%;
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      row-gap: 3vh;
+
+      button {
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 0%;
+        padding-inline: 0%;
+        height: 10vh;
+        border-radius: 10px;
+        color: $color_orange;
+        border: solid 2px $color_background;
+      }
     }
   }
-
-
-
+}
 
 @media screen and (max-width: 678px) {
-
   .home-section1-container {
     padding-top: 9vh;
     width: 100vw;
@@ -103,7 +138,7 @@
     justify-content: center;
     align-items: center;
     color: $color_background;
-  
+
     .home-section1-center-container {
       text-align: center;
       display: flex;
@@ -112,7 +147,7 @@
       justify-content: center;
       width: 85%;
       margin-left: 8%;
-      margin-right:8%;
+      margin-right: 8%;
       row-gap: 2vh;
       h1 {
         font-size: 3rem;
@@ -120,39 +155,36 @@
         text-align: center;
       }
       h2 {
-          margin-top: 2%;
+        margin-top: 2%;
         font-size: 1.8rem;
         font-weight: 400;
         text-align: center;
         margin-left: 5%;
-      margin-right:5%;
-  
+        margin-right: 5%;
       }
     }
-  
-    .home-section1-button-container{
+
+    .home-section1-button-container {
       margin-top: 3%;
       width: 80%;
-      height: 20vh;
+      height: fit-content;
       display: flex;
       justify-content: center;
       flex-direction: column;
       row-gap: 2vh;
-    
-     
-  
-      button{
-          font-size: 1.8rem;
-          font-weight: 400;
-          padding: 4%;
-          padding-inline: 7%;
-          border-radius: 10px;
-          color:$color_orange;
-          border: solid 2px $color_background;
-         
+
+      button {
+        font-size: 1.8rem;
+        font-weight: 400;
+        height: 7vh;
+        padding: 4%;
+        padding-inline: 7%;
+        border-radius: 10px;
+        color: $color_orange;
+        border: solid 2px $color_background;
       }
     }
-  
+
     img {
       position: absolute;
       object-fit: cover;
@@ -161,7 +193,4 @@
       z-index: -1;
     }
   }
-  
-
-
 }

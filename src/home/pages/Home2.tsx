@@ -1,5 +1,5 @@
 import { RefObject } from "react";
-import profile from "../assets/abril.png";
+import profile from "../assets/abril.webp";
 
 interface Home2Options {
   reference: RefObject<HTMLDivElement> | undefined;
@@ -22,7 +22,7 @@ export const Home2 = ({ reference }: Home2Options) => {
           <p>
             Como licenciada en nutrición mi enfoque se centra en mujeres desde
             30 años en adelante que quieren tener una mejor relación con la
-            comida y que van más allá de la dieta convencional (anti/dieta) que
+            comida y que van más allá de la dieta convencional que
             nos permite una mejor adherencia a largo plazo sin efecto rebote.
           </p>
           <p>

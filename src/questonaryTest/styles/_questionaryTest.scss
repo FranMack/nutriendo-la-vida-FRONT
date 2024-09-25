@@ -31,12 +31,21 @@
         border-radius: 6px;
         font-size: 1.5rem;
         font-weight: 600;
+        transition: 0.5s;
     }
     >.button-trasparente{
         background-color: transparent;
         color:$color_cyan;
         border: none;
     }
+    button:hover{
+        opacity: 0.8;
+        scale: 1.05;
+      }
+      button:active{
+        filter: brightness(1.1);
+       
+      }
 
    .result-title{
     color:$color_cyan;
@@ -51,6 +60,55 @@
 
  
 }
+
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .questionary-container{
+
+   
+        height: 100vh;
+        padding-top: 13vh;
+        row-gap: 5%;
+        >h2{
+            font-size: 3rem;
+            line-height: 4rem;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        >h3{
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        >button{
+            width: 35%;
+            height: 12%;
+           
+        }
+        
+       
+       .result-title{
+        color:$color_cyan;
+        font-size: 5.5rem;
+        line-height: 7rem;
+       }
+       .result-secundaryTitle{
+        color:$color_cyan;
+        font-weight: lighter;
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+       }
+    
+     
+    }
+
+
+}
+
 
 
 @media screen and (max-width: 678px) {
@@ -78,6 +136,7 @@
             height: 8%;
            
         }
+        
        
        .result-title{
         color:$color_cyan;

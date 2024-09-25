@@ -12,11 +12,12 @@ import logoV from "../assets/logo-v.png";
 
 const navbarMenu = [
   { title: "Home", path: "/#home" },
-  { title: "Conocerme", path: "/#me" },
+  { title: "Conoceme", path: "/#me" },
   { title: "Planes", path: "/#plans" },
   { title: "Ebook", path: "/#ebook" },
   { title: "Hacer test", path: "/test" },
 ];
+
 
 const icons = [
   {
@@ -32,7 +33,7 @@ const icons = [
   {
     title: "Linkedin",
     icon: <LinkedinIcon />,
-    path: "https://www.instagram.com/nutriendolavida/",
+    path: "https://www.linkedin.com/in/abril-agustina-sack-44642b142/",
   },
 ];
 

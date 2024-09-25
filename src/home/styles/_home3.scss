@@ -10,14 +10,14 @@
     text-align: center;
     h3{
       color:$color_orange;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: 400;
       text-transform: uppercase;
       margin-bottom: 2%;
     }
     h4{
       font-family: $font_titles;
-      font-size: 5rem;
+      font-size: 4.5rem;
       color:$color_text2;
       margin-bottom: 5%;
       margin-left: 12%;
@@ -112,6 +112,130 @@
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+
+
+  .home-section3-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+  
+  
+    .home-section3-top-container{
+      text-align: center;
+      h3{
+        color:$color_orange;
+        font-size:2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 2%;
+      }
+      h4{
+        font-family: $font_titles;
+        font-size: 3.5rem;
+        color:$color_text2;
+        margin: 5%;
+      }
+  
+    }
+  
+  
+  .home-section3-center-container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 10vh;
+    padding-bottom: 20vh;
+  }
+  
+    .home-section3-card-container{
+      display: flex;
+      justify-content: start;
+      align-items: end;
+      width: 100%;
+      aspect-ratio: 3;
+      display: flex;
+    column-gap: 0;
+      margin-bottom: 0%;
+  
+      .card-container-left{
+  
+        width: 80%;
+        height: 100%;
+        .number-container{
+          position: relative;
+          width: 20%;
+          height: fit-content;
+          p{
+            position: absolute;
+            font-family: $font_titles;
+            font-size: 3.5rem;
+            top:15%;
+            left: 20%;
+          }
+          img{
+            object-fit: cover;
+            position: absolute;
+            height: 100%;
+          }
+        }
+        >.text-container{
+          position: absolute;
+          top: 15%;
+          left: 10%;
+        }
+        h3{
+          font-family: $font_titles;
+          font-size: 2.5rem;
+          margin-bottom: 3%;
+        }
+        p{
+          font-size: 1.6rem;
+          line-height: 2.2rem;
+          font-weight: 400;
+          margin-bottom: 2%;
+          color:$color_text1
+        }
+      }
+  
+      .card-container-right{
+        height: 80%;
+        width: 20%;
+        display: flex;
+        align-items: end;
+        .arrow-container{
+          height: 55%;
+          width: 90%;
+          margin:  0 auto;
+         
+      
+          overflow: hidden;
+          img{
+           
+            object-fit: cover;
+            height: 100%;
+  
+    
+          }
+  
+        }
+      
+      }
+      
+    }
+    .home-section3-card-container.right{
+      justify-content: end;
+    }
+  }
+
+
+}
+
+
 @media screen and (max-width: 678px) {
 
   .home-section3-container {
@@ -126,7 +250,7 @@
       text-align: center;
       h3{
         color:$color_orange;
-        font-size: 1.6rem;
+        font-size:2rem;
         font-weight: 400;
         text-transform: uppercase;
         margin-bottom: 2%;
@@ -134,7 +258,7 @@
       h4{
         font-family: $font_titles;
        
-        font-size: 3.7rem;
+        font-size: 3.5rem;
         color:$color_text2;
         margin: 5%;
       }

@@ -20,6 +20,7 @@ export const Checkout = () => {
   const [step, setStep] = useState<string>("resume");
   const nextStep = () => {
     setStep("finalForm");
+    window.scrollTo(0, 0);
   };
 
   const { shopingCartItems, setShopingCartItems } =

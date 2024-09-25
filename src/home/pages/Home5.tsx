@@ -1,5 +1,5 @@
-import carrousel1 from "../assets/carrousel1.png";
-import carrousel2 from "../assets/carrousel2.png";
+import carrousel1 from "../assets/carrousel1.webp";
+import carrousel2 from "../assets/carrousel2.webp";
 import purpleBackground from "../assets/purpleBackground.png"
 import { ArrowLeft } from "../../assets/icons";
 import { RefObject, useState } from "react";
@@ -24,7 +24,7 @@ const carrusel: CarruselData[] = [
     image: carrousel1,
   },
   {
-    title: "Imagina donde estarás en un año si",
+    title: "Imagina donde llegarás si",
     secundaryTitle: "comienzas hoy.",
     text: "¡Enamorate del proceso y los resultados llegarán!",
     image: carrousel2,
@@ -77,7 +77,7 @@ export const Home5 = ({reference}:Home2Options) => {
           <div className="home-section5-bottom-container">
             <img src={purpleBackground} alt="purple background" />
             <h5>
-            ¿No sabes cual plan es el másn indicado para vos?
+            ¿No sabes cual plan es el más indicado para vos?
             </h5>
             <h6>
             ¡Con estas simples preguntas puedo ayudarte!. Lleva menos de 1 minuto

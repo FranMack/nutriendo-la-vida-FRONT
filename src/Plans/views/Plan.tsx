@@ -3,6 +3,9 @@ import { ShopingCartContext } from "../../context/shopingCart.context";
 import { plans } from "../assets/plansInfo";
 import { useContext, useEffect, useState } from "react";
 import {  useNavigate, useParams } from "react-router-dom";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ScreenSizeContext } from "../../context/screenSize.context";
 
 
 
@@ -56,7 +59,7 @@ export const Plan = () => {
   };
 
   const {toggleMenu,shopingCartItems, setShopingCartItems}=useContext(ShopingCartContext)
-
+  const {screenWidth}=useContext(ScreenSizeContext)
 
 
  
@@ -100,18 +103,20 @@ export const Plan = () => {
     const shopingCart:ShopingCartItemOptions[] = JSON.parse(shopingCartJSON);
     if(!shopingCart.find((item)=>{return item.id===index})){
 
-      alert("Debes agregar un plan y luego la consulta")
+      toast.warning("Debes agregar un plan al carrito y luego la consulta")
       return
     }
 
     const shopingCartUpdate=shopingCart.map((item)=>{
       if(item.id===index){
+       
         return {...item,consult:!item.consult}
       }
       else{
         return item
       }
     })
+    if(!consultState()){toast.success("Consulta agregada")}
 
     
 
@@ -153,7 +158,7 @@ export const Plan = () => {
               <h4></h4>
             <button onClick={addToShopingCart}>Agregar al carrito</button>
             <button onClick={handleConsult} className="button-transparent">{consultState()?"Quitar consulta profesional":"Agregar consulta profesional"}</button>
-            <div className="text-container">
+          {(screenWidth<=680 || screenWidth>1024) &&   <div className="text-container">
               <h5>Descripción</h5>
               <p>
               {plans[index-1].paragraph}
@@ -161,9 +166,18 @@ export const Plan = () => {
               <br />
               <p>
                 Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus habitos y métas. En 48-72 horas luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
-            </div>
+            </div>}
           </div>
         </div>
+        {(screenWidth>680 && screenWidth<=1024) &&   <div className="text-container-horizontal-mobile">
+              <h5>Descripción</h5>
+              <p>
+              {plans[index-1].paragraph}
+              </p>
+              <br />
+              <p>
+                Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus habitos y métas. En 48-72 horas luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
+            </div>}
       </div>
     </section>
   );

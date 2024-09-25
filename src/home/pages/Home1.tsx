@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import background from "../assets/background_home.png";
+import background from "../assets/background_home.webp";
 
 export const Home1 = () => {
   const navigate = useNavigate();
@@ -18,14 +18,11 @@ export const Home1 = () => {
         <h2>
           Aprenderás a comer sin restricciones, adaptando tu alimentación a tus
           objetivos y estilo de vida.
-          <br />
-          <br />
-          De manera real, no perfecta.{" "}
         </h2>
 
         <div className="home-section1-button-container">
-          <button onClick={linkToTest}>Hacer el test</button>
           <button onClick={linkToPlans}>Conocer planes</button>
+          <button onClick={linkToTest}>Hacer el test</button>
         </div>
       </div>
     </section>

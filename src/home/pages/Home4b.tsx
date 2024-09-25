@@ -17,11 +17,12 @@ export const Home4b = ({ reference }: Home4bOptions) => {
         <div className="text-container">
           <h4>
             Ebook:
-            <br /> herramientas prácticas para gente sin tiempo
+            <br /> Preparate 1 dia y disfruta toda la semana.
           </h4>
           <h5>
             Cocina 1 dia y come toda la semana.
-            <br /> Guía para comprar en el super y ahorrar dinero
+            <br /> Guía para comprar en el super y ahorrar dinero.
+            <br />  Recetario.
           </h5>
           <button onClick={linkTo}>Lo quiero</button>
         </div>

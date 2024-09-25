@@ -3,7 +3,7 @@ import {
   ShopingCartContext,
   ShopingCartItemOptions,
 } from "../../context/shopingCart.context";
-import ebbok from "../assets/ebook.png";
+import ebbok from "../assets/ebook.webp";
 
 export const Ebook = () => {
   useEffect(() => {

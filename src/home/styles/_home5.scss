@@ -133,11 +133,132 @@
    
 }
 
+
+@media screen and (max-width: 1024px) {
+
+
+    .home-section5-container{
+   
+        
+       
+    
+        .carrpusel-container{
+          
+            width: 90%;
+            height: 75vh;
+           
+            
+            .home-section5-internal-container{
+             
+              
+                >.text-container{
+                    width: 75%;
+    
+                    h5{
+                        font-size: 3rem;
+                        font-family: $font_titles;
+                        line-height: 3.5rem;
+                        color:$color_cyan;
+                    }
+        
+                    h6{
+                        font-size: 2.5rem;
+                        line-height: 4rem;
+                        font-family: $font_titles;
+                        color:$color_cyan;
+                        text-transform: uppercase;
+                        margin-bottom: 2%;
+                    }
+                    p{
+                        font-size: 1.7rem;
+                        color:$color_text1
+                    }
+    
+                }
+               
+              
+            }
+            .arrow-container{
+            
+              
+                height: 15%;
+              ;
+            }
+            .arrow-container.left{
+                left:0%;
+          
+            }
+            .arrow-container.right{
+                right:0%;
+                transform: rotate(180deg);
+            }
+        }
+    
+        .home-section5-bottom-container{
+            width: 100%;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:$color_background;
+            text-align: center;
+            transform: translateY(-6.5vh);
+            img{
+                position:absolute;
+                object-fit: cover;
+                width: 100%;
+                
+            
+            }
+            h5{
+                font-size: 3.2rem;
+                line-height: 4.2rem;
+                margin-bottom: 2%;
+            }
+            h6{
+                font-size: 2rem;
+                line-height: 3rem;
+                margin-bottom: 2%;
+            }
+    
+            >button{
+              
+                font-size: 1.6rem;
+                font-weight: 400;
+                width: 30%;
+                height: 13%;
+          
+               
+            }
+            button:hover{
+                opacity: 0.8;
+                scale: 1.05;
+              }
+              button:active{
+                filter: brightness(1.1);
+               
+              }
+        }
+    
+        .carrpusel-container-reverse{
+            flex-direction: row-reverse;
+        }
+       
+    }
+    
+
+
+}
+
+
+
 @media screen and (max-width: 678px) {
 
     .home-section5-container{
         width: 100vw;
-        margin-top: 10vh;
+        margin-top: 0vh;
       
         
        
@@ -231,7 +352,7 @@
             row-gap: 3%;
             color:$color_background;
             text-align: center;
-            transform: translateY(-22vh);
+            transform: translateY(-24vh);
             img{
                 position:absolute;
                 object-fit:fill;
@@ -263,6 +384,7 @@
                 font-weight: 400;
                 padding: 3.5%;
                 width: 80%;
+                height: fit-content;
                 border-radius: 10px;
                 border:none;
                 color:$color_background;

@@ -1,9 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { CloseIcon, DeleteIcon } from "../../assets/icons";
-//import { Button } from "./Button";
 import { useContext } from "react";
 import { ShopingCartContext } from "../../context/shopingCart.context";
 import { ShopingCartItemOptions } from "../../Plans/views/Plan";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function ShopingCart() {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ export function ShopingCart() {
     const shopingCartJSON = localStorage.getItem("shopingCart") || "[]";
     const shopingCart: ShopingCartItemOptions[] = JSON.parse(shopingCartJSON);
     if (shopingCart.length < 1) {
-      alert("Aún no has agregado productos al carrito");
+      toast.warning("Aún no has agregado productos al carrito");
       return;
     }
     navigate("checkout");
@@ -105,15 +106,17 @@ export function ShopingCart() {
         })}
       </div>
 
-      <div className="shoping-cart-button-container">
+      <div className="shoping-cart-botton-container">
         <hr />
-        <div className="shoping-cart-button-price-container">
-          <p>Total estimado</p>
+        <div className="shoping-cart-botton-price-container">
+          <p>Total a pagar:</p>
           <p>${totalPrice()}</p>
         </div>
-
+        <div className="button-container">
         <button onClick={linkToCheckOut}>COMPRAR</button>
         <button onClick={toggleMenu}>SEGUIR NAVEGANDO</button>
+        </div>
+       
 
         <hr />
       </div>
