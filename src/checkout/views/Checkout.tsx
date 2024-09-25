@@ -120,7 +120,7 @@ export const Checkout = () => {
     },
   });
 
-  console.log("xxxxxxxxxxx", shopingCartItems);
+
   return (
     <section
       className={

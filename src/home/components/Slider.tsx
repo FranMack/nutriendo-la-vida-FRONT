@@ -71,7 +71,7 @@ export function Slider({ plans,linkTo }: PlanGridOptions) {
     }
   };
 
-  console.log("xxxxxxxxxxxxxxx",index)
+
 
   return (
     <div className="wrapper">

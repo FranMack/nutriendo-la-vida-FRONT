@@ -53,7 +53,7 @@ export const QuestionaryTest = () => {
 
 
  
-console.log("xxxxxxxxxxxxxxxx",plan)
+
   return (
     <section className='questionary-container leftReveal'>
       { step===0 && <> <h2>¡Hola<br/>
