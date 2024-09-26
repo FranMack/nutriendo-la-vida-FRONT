@@ -259,7 +259,7 @@ export const Checkout = () => {
 
                       {item.consult && (
                         <div className="item-price-container">
-                          <p>Consulta profesional</p>
+                          <p>Consulta</p>
                           <strong>{`$ ${item.consultPrice}`}</strong>
                         </div>
                       )}

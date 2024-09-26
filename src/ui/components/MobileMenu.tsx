@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   CloseIcon,
-  FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
 } from "../../assets/icons";
@@ -23,11 +22,6 @@ const icons = [
   {
     title: "Instagram",
     icon: <InstagramIcon />,
-    path: "https://www.instagram.com/nutriendolavida/",
-  },
-  {
-    title: "Facebook",
-    icon: <FacebookIcon />,
     path: "https://www.instagram.com/nutriendolavida/",
   },
   {

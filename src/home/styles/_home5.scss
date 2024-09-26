@@ -80,12 +80,14 @@
         align-items: center;
         color:$color_background;
         text-align: center;
-        transform: translateY(-6.5vh);
+
+        background-color: $color_purple;
+   
         img{
+            transform: translateY(-7vh);
             position:absolute;
             object-fit: cover;
-            width: 100%;
-            
+            height: 100%;
         
         }
         h5{
@@ -204,11 +206,11 @@
             align-items: center;
             color:$color_background;
             text-align: center;
-            transform: translateY(-6.5vh);
+      
             img{
                 position:absolute;
                 object-fit: cover;
-                width: 100%;
+                height: 100%;
                 
             
             }
@@ -269,7 +271,8 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: 100vh;
+            height: fit-content;
+            padding-top: 10vh;
             justify-content: center;
             align-items: center;
             .home-section5-internal-container.left{
@@ -352,12 +355,12 @@
             row-gap: 3%;
             color:$color_background;
             text-align: center;
-            transform: translateY(-24vh);
+            
+           
             img{
                 position:absolute;
-                object-fit:fill;
-                width: 200%;
-                height: 100%;
+                object-fit:cover;
+                height: 80%;
                 
             
             }

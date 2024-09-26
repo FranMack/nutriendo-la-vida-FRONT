@@ -16,8 +16,8 @@ export function SliderCard({id,title,items,price,backgroundColor,color,linkTo}:P
         <h4 style={{color:color}}>
           {title}
         </h4>
-        <ul style={{color:color}}>{items.map((item)=>{
-          return(<li>{item}</li>)
+        <ul style={{color:color}}>{items.map((item,i)=>{
+          return(<li key={i}>{item}</li>)
         })}</ul>
         <h5 style={{color:color}}>{`$${price}`}</h5>
         <div className='buttons-container'>

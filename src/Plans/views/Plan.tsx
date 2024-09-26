@@ -96,6 +96,13 @@ export const Plan = () => {
 
     toggleMenu()
 
+
+    
+  }
+
+    const consultState=()=>{
+
+    return shopingCartItems.find((item)=>{ if(item.id===index && item.consult){return item}})
   }
 
   const handleConsult=()=>{
@@ -127,10 +134,7 @@ export const Plan = () => {
   }
 
 
-  const consultState=()=>{
 
-    return shopingCartItems.find((item)=>{ if(item.id===index && item.consult){return item}})
-  }
 
   return (
     <section className="plan-container">

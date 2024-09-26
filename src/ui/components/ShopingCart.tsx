@@ -88,7 +88,7 @@ export function ShopingCart() {
 
                   {item.consult && (
                     <div className="item-price-container">
-                      <p>Consulta profesional</p>
+                      <p>Consulta</p>
                       <strong>{`$ ${item.consultPrice}`}</strong>
                     </div>
                   )}
@@ -113,8 +113,8 @@ export function ShopingCart() {
           <p>${totalPrice()}</p>
         </div>
         <div className="button-container">
-        <button onClick={linkToCheckOut}>COMPRAR</button>
-        <button onClick={toggleMenu}>SEGUIR NAVEGANDO</button>
+        <button onClick={linkToCheckOut}>Comprar</button>
+        <button onClick={toggleMenu}>Seguir navegando</button>
         </div>
        
 

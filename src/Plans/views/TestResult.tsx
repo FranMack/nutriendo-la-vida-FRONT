@@ -4,6 +4,8 @@ import { useContext, useEffect, useState } from "react";
 import { plans } from "../assets/plansInfo";
 import { ShopingCartItemOptions } from "./Plan";
 import { ShopingCartContext } from "../../context/shopingCart.context";
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const TestResult = () => {
 
@@ -69,12 +71,14 @@ export const TestResult = () => {
 
   }
 
+
+  
   const handleConsult=()=>{
     const shopingCartJSON = localStorage.getItem("shopingCart") || "[]";
     const shopingCart:ShopingCartItemOptions[] = JSON.parse(shopingCartJSON);
     if(!shopingCart.find((item)=>{return item.id===index})){
 
-      alert("Debes agregar un plan y luego la consulta")
+      toast.warning("Debes agregar un plan al carrito y luego la consulta")
       return
     }
 
@@ -87,6 +91,7 @@ export const TestResult = () => {
       }
     })
 
+    if(!consultState()){toast.success("Consulta agregada")}
     
 
     localStorage.setItem("shopingCart", JSON.stringify(shopingCartUpdate));

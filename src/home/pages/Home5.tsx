@@ -1,6 +1,6 @@
 import carrousel1 from "../assets/carrousel1.webp";
 import carrousel2 from "../assets/carrousel2.webp";
-import purpleBackground from "../assets/purpleBackground.png"
+import purpleBackground from "../assets/purpleBackground.webp"
 import { ArrowLeft } from "../../assets/icons";
 import { RefObject, useState } from "react";
 import { useNavigate } from "react-router-dom";

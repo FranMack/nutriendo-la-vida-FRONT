@@ -72,6 +72,20 @@
 
                 }
             }
+
+            .plan-image-container.ebook{
+                width:40%;
+            
+                display: flex;
+                align-items: start;
+        
+                img{
+                    object-fit: contain;
+                    width: 100%;
+                    height: auto;         
+
+                }
+            }
             .plan-info-container{
                 width: 50%;
                 height: 100%;
@@ -194,7 +208,7 @@
                         width:40%;
                         height: 90%;
                         display: flex;
-                        align-items: start;
+                        align-items: center;
                 
                         img{
                             object-fit: cover;
@@ -204,6 +218,20 @@
         
                         }
                     }
+
+                    .plan-image-container.ebook{
+                        width:35%;
+                    
+                        display: flex;
+                        align-items: start;
+                
+                       
+                    }
+
+
+           
+
+
                     .plan-info-container{
                         width: 50%;
                         height: 100%;
@@ -359,6 +387,21 @@
         
                         }
                     }
+
+
+                    .plan-image-container.ebook{
+                        width:70%;
+                    
+                        display: flex;
+                        align-items: start;
+                
+                       
+                    }
+
+
+
+
+
                     .plan-info-container{
                         margin: 0 auto;
                         padding-bottom: 10vh;

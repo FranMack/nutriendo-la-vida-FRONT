@@ -35,9 +35,9 @@ export const Navbar = () => {
         </div>
 
         <ul className="navbar-menu">
-          {menu.map((item) => {
+          {menu.map((item,i) => {
             return (
-              <a href={item.path === "#home" ? "/" : `/${item.path}`}>
+              <a key={i} href={item.path === "#home" ? "/" : `/${item.path}`}>
                 <li key={item.title}>{item.title}</li>
               </a>
             );

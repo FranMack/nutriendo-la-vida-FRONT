@@ -7,7 +7,7 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: $color_background;
+    background-color: rgba($color: gray, $alpha: 0.1);
 
     .footer-top-container{
         margin-top: 7.5vh;
@@ -110,6 +110,7 @@ footer{
         align-items: center;
         p{
             font-size: 1.5rem;
+            
         }
         .zm-container{
             position: absolute;
@@ -119,9 +120,14 @@ footer{
             height: 50%;
             align-items: center;
             column-gap: 1vw;
+            p{
+                font-size: 1.4rem;
+                color: gray;
+            }
             img {
                 object-fit: cover;
                 height: 100%;
+                opacity: 0.5;
             };
 
         }
@@ -139,7 +145,7 @@ footer{
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        background-color: $color_background;
+     
     
         .footer-top-container{
             margin-top: 0vh;
@@ -248,9 +254,8 @@ footer{
             .zm-container{
                 position: static;
                 cursor: pointer;
-                right: 2%;
                 display: flex;
-                height: 50%;
+                height: 35%;
                 align-items: center;
                 column-gap: 1vw;
                 img {
@@ -277,11 +282,12 @@ footer{
 
     footer{
     
-        height:88vh;
+        height:100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+      
 
     
         .footer-top-container{
@@ -379,6 +385,7 @@ footer{
         }
     
         .footer-bottom-container{
+            position: relative;
             width: 100%;
             height: 20%;
 
@@ -386,19 +393,24 @@ footer{
            flex-direction: column;
             justify-content: center;
             align-items: center;
-            row-gap: 15%;
+          
             p{
                 font-size: 1.8rem;
             }
             .zm-container{
-                p{
-                    font-size: 1.7rem;
-                }
-                position: static;
+               
+              position: absolute;
+              bottom: 3%;
+              right: auto;
                 display: flex;
-                height: 25%;
+                height: 20%;
                 align-items: center;
                 column-gap: 2vw;
+                p{
+                    font-size: 1.6rem;
+                    color:gray
+                }
+           
                 img {
                     object-fit: cover;
                     height: 100%;

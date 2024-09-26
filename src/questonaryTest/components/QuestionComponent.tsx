@@ -51,9 +51,9 @@ export const QuestionComponent = ({title,options}:Questions) => {
         <TopBar/>
         <h2>{title}</h2>
         <div className='question-component-options-container'>
-        {options.map((item)=>{
+        {options.map((item,i)=>{
             return(
-                <label className={warning ? "warning":""} >
+                <label key={i} className={warning ? "warning":""} >
                     <input  type="radio"name={item.choice} value={item.choice} checked={answer === item.choice} onChange={handleAnswer} />
                      {item.choice}
                    
