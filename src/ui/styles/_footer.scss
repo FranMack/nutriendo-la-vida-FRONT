@@ -88,10 +88,9 @@ footer{
         .fotter-socialMedia-container{
             width: fit-content;
             height: 30%;
-            aspect-ratio: 4;
             display: flex;
             justify-content: center;
-            column-gap: 10%;
+            column-gap: 1vw;
             cursor: pointer;
            
             .socialMedia-container-item{
@@ -117,11 +116,13 @@ footer{
             cursor: pointer;
             right: 2%;
             display: flex;
-            height: 50%;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            height: 50%;
             column-gap: 1vw;
             p{
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 color: gray;
             }
             img {
@@ -227,11 +228,10 @@ footer{
     
            
             .fotter-socialMedia-container{
-                width: fit-content;
+                width: 22%;
                 height: 15%;
                 display: flex;
                 justify-content: center;
-                column-gap: 10%;
                 cursor: pointer;
                
                 .socialMedia-container-item{
@@ -258,6 +258,9 @@ footer{
                 height: 35%;
                 align-items: center;
                 column-gap: 1vw;
+                p{
+                    font-size: 1.1rem;
+                }
                 img {
                     object-fit: cover;
                     height: 100%;
@@ -373,7 +376,7 @@ footer{
                 height: 12%;
                 display: flex;
                 justify-content: center;
-                column-gap: 10%;
+                column-gap: 3vw;
                 cursor: pointer;
                
                 .socialMedia-container-item{
@@ -400,14 +403,15 @@ footer{
             .zm-container{
                
               position: absolute;
-              bottom: 3%;
-              right: auto;
+              bottom: 5%;
+              right: 2%;
                 display: flex;
                 height: 20%;
                 align-items: center;
+                justify-content: center;
                 column-gap: 2vw;
                 p{
-                    font-size: 1.6rem;
+                    font-size: 1.2rem;
                     color:gray
                 }
            
