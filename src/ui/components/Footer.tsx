@@ -1,7 +1,7 @@
 import logoN from "../assets/logo-n.png";
 import logoV from "../assets/logo-v.png";
 import zmLogo from "../assets/zmLogo.png"
-import { MailIcon,InstagramIcon,LinkedinIcon } from '../../assets/icons';
+import { MailIcon,WhatsUpIcon,InstagramIcon,LinkedinIcon } from '../../assets/icons';
 
 
 
@@ -38,8 +38,8 @@ export const Footer = () => {
         </div>
         <div className='fotter-info-container'>
           <h6>CONTACTO</h6>
-          <div className='info-container-item' onClick={linkToWhasap}><MailIcon/><p>11 598202980</p></div>
           <div className='info-container-item' onClick={linkToMail}><MailIcon/><p>nutriendolavida.salud@gmail.com</p></div>
+          <div className='info-container-item' onClick={linkToWhasap}><WhatsUpIcon/><p>11 598202980</p></div>
         </div>
         </div>
         <div className='fotter-socialMedia-container'>
