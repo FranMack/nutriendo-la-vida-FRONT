@@ -1,7 +1,7 @@
 import logoN from "../assets/logo-n.png";
 import logoV from "../assets/logo-v.png";
 import zmLogo from "../assets/zmLogo.png"
-import { MailIcon,WhatsUpIcon,InstagramIcon,LinkedinIcon } from '../../assets/icons';
+import { WhatsUpIcon,InstagramIcon,LinkedinIcon } from '../../assets/icons';
 
 
 
