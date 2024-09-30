@@ -14,10 +14,12 @@ import { useContext, useEffect } from "react";
 import { CheckoutRoute } from "./routes/CheckoutRoute";
 import { Slide, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MobileMenuContext } from "./context/mobileMenuContext";
 
 function App() {
 
   const {shopingCartOpen,setShopingCartItems}=useContext(ShopingCartContext)
+  const{menuRef,menuOpen,toggleMenu}=useContext(MobileMenuContext)
 
   useEffect(()=>{
     const shopingCartJSON = localStorage.getItem("shopingCart") || "[]";
@@ -30,6 +32,27 @@ function App() {
 
   window.addEventListener("resize", ()=>{setScreenWidth(window.innerWidth)});
 
+
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as HTMLElement;
+    
+    // Verificar si el menú está abierto y si el clic fue fuera del menú
+    if (menuOpen && target.id !== "menu-hamburguesa-icon" && menuRef!.current && !menuRef!.current.contains(target)) {
+      toggleMenu(); // Cerrar el menú
+    }
+  };
+  
+  useEffect(() => {
+    if (menuOpen) {
+      document.addEventListener("click", handleClickOutside);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+    }
+  
+    return () => {
+      document.removeEventListener("click", handleClickOutside); // Cleanup cuando el componente se desmonte
+    };
+  }, [menuOpen]);
 
 
 
