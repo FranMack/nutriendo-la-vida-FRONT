@@ -150,7 +150,8 @@ img{
         
         .home-section4b-internal-container{
     width: 100%;
-    height: fit-content;
+  height: auto;
+  min-height: 30%;
     display: flex;
     flex-direction: column;
             
@@ -161,7 +162,7 @@ img{
     
     >.text-container{
         width: 80%;
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -193,7 +194,7 @@ img{
     
     img{
         object-fit: cover;
-        height: fit-content;
+        height: auto;
         max-width: 65%;
   
     
