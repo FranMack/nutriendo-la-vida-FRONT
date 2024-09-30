@@ -50,8 +50,9 @@ footer{
               
             }
             .fotter-info-container{
-                width: fit-content;
+                width: 100%;
                 height: 100%;
+                padding-left: 10%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -192,8 +193,9 @@ footer{
                   
                 }
                 .fotter-info-container{
-                    width: fit-content;
+                    width: 100%;
                     height: 100%;
+                    padding-left: 2%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
