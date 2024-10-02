@@ -1,6 +1,6 @@
 import { RefObject } from "react";
 import { useNavigate } from "react-router-dom";
-import ebook from "../assets/ebook2.png";
+import ebook from "../assets/ebook.webp";
 
 interface Home4bOptions {
   reference: RefObject<HTMLElement> | undefined;

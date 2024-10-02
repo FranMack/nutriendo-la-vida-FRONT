@@ -123,7 +123,8 @@ export const Plan = () => {
         return item
       }
     })
-    if(!consultState()){toast.success("Consulta agregada")}
+    if(!consultState()){toast.success("Consulta agregada",{autoClose: 3000,
+      hideProgressBar: true,style:{backgroundColor:"#c65921",color:"#ffff"}})}
 
     
 
