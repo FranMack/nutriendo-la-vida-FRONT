@@ -3,7 +3,7 @@ import {
   ShopingCartContext,
   ShopingCartItemOptions,
 } from "../../context/shopingCart.context";
-import ebbok from "../assets/ebook.webp";
+import ebbok from "../../home/assets/ebook.webp";
 import { ScreenSizeContext } from "../../context/screenSize.context";
 
 export const Ebook = () => {
