@@ -20,11 +20,12 @@ export function ShopingCart() {
       (acc, item) => acc + item.price,
       0
     );
+    const consultPrice = shopingCartItems.find((item)=>{if(item.consult){return item}})?.consultPrice || 0
     const consultNumbers = shopingCartItems.filter((item) => {
       return item.consult === true;
     }).length;
     const total =
-      plansPrice + consultNumbers * shopingCartItems[0].consultPrice;
+      plansPrice + consultNumbers * consultPrice;
 
     return total;
   };

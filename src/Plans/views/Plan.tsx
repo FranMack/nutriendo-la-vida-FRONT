@@ -126,6 +126,9 @@ export const Plan = () => {
     if(!consultState()){toast.success("Consulta agregada",{autoClose: 3000,
       hideProgressBar: true,style:{backgroundColor:"#c65921",color:"#ffff"}})}
 
+      if(consultState()){toast.warning("Consulta cancelada",{autoClose: 3000,
+        hideProgressBar: true,style:{backgroundColor:"#c65921",color:"#ffff"}})}
+
     
 
     localStorage.setItem("shopingCart", JSON.stringify(shopingCartUpdate));
@@ -170,7 +173,7 @@ export const Plan = () => {
               </p>
               <br />
               <p>
-                Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus habitos y métas. En 48-72 horas luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
+              Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus hábitos y metas. En 48-72 horas, luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
             </div>}
           </div>
         </div>
@@ -181,7 +184,7 @@ export const Plan = () => {
               </p>
               <br />
               <p>
-                Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus habitos y métas. En 48-72 horas luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
+              Una vez que realices la compra, recibirás un formulario que me permitirá conocer mejor sobre tus hábitos y metas. En 48-72 horas, luego de completarlo, recibirás tu plan alimentario personalizado y guías para ayudarte a mantener tu nuevo estilo de vida.</p>
             </div>}
       </div>
     </section>

@@ -33,9 +33,7 @@ export const Checkout = () => {
       return 0; // Devuelve 0 si el carrito aún no ha cargado.
     }
 
-    const consultPrice = shopingCartItems[0].consultPrice
-      ? shopingCartItems[0].consultPrice
-      : 5;
+    const consultPrice = shopingCartItems.find((item)=>{if(item.consult){return item}})?.consultPrice || 0
 
     const plansPrice = shopingCartItems.reduce(
       (acc, item) => acc + item.price,
@@ -98,7 +96,8 @@ export const Checkout = () => {
       const items = shopingCartItems.map((item) => {
         return {
           id: item.id,
-          title: item.consult ? `${item.product} (+ Consulta)` : item.product,
+          title: item.product,
+          consult:item.consult,
           unit_price: item.consult
             ? item.consultPrice + item.price
             : item.price,

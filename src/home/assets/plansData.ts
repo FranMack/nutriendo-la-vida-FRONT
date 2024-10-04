@@ -1,3 +1,6 @@
+import { price } from "../../config/price";
+
+
 export interface PlanOptions {
   title: string;
   items: string[];
@@ -7,13 +10,16 @@ export interface PlanOptions {
   id: string;
 }
 
+
+
+
 export const plans: PlanOptions[] = [
   {
     title: "Baja de peso sin culpa ni restricciones",
     items: [
-      "Conseguiras un deficit calorico saludable para perder peso sin efecto rebote y manejando las emociones",
+      "Conseguirás un déficit calórico saludable para perder peso sin efecto rebote y manejando las emociones.",
     ],
-    price: 15000,
+    price: price.plan,
     color: "#677e28",
     backgroundColor: "#d5e7cc",
     id: "1",
@@ -21,9 +27,9 @@ export const plans: PlanOptions[] = [
   {
     title: "Alimentación y rendimiento deportivo",
     items: [
-      "Mejoraras tu rendimiento deportivo cada dia para aumentar tus musculos de manera natura, entrenando y alimentandote segun tu cuerpo",
+      "Mejorarás tu rendimiento deportivo cada día para aumentar tus músculos de manera natural, entrenando y alimentándote según tu cuerpo..",
     ],
-    price: 15000,
+    price: price.plan,
     color: "#ae5e2d",
     backgroundColor: "#dcdecc",
     id: "2",
@@ -31,9 +37,9 @@ export const plans: PlanOptions[] = [
   {
     title: "Cómo crear buenos hábitos alimenticios",
     items: [
-      "Lograras modificar y sostener habitos en viajes, vacaciones, eventos sociales estableciendo prioridades, sin limitaciones y llegando a tus objetivos",
+      "Lograrás modificar y sostener hábitos en viajes, vacaciones, eventos sociales estableciendo prioridades, sin limitaciones y llegando a tus objetivos.",
     ],
-    price: 15000,
+    price: price.plan,
     color: "#178781",
     backgroundColor: "#bedfdd",
     id: "3",
@@ -41,9 +47,9 @@ export const plans: PlanOptions[] = [
   {
     title: "Alimentación en pre y post menopausia",
     items: [
-      " Alcanzaras un deficit calorico para potenciar la perdida de grasa, trabajando tus hormonas con los alimentos para prevenir los sintomas y sentirte mejor en esta etapa.",
+      "Alcanzarás un déficit calórico para potenciar la pérdida de grasa, trabajando tus hormonas con los alimentos para prevenir los síntomas y sentirte mejor en esta etapa.",
     ],
-    price: 15000,
+    price: price.plan,
     color: "#7d5aa4",
     backgroundColor: "#d3d9e5",
     id: "4",

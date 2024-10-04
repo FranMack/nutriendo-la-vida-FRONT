@@ -7,10 +7,10 @@ interface PlansOpgions {
   "¿Haces actividad física más de 3 veces por semana?": "Si" | "No";
   "¿Entrenas y te gustaría estar más marcada y fibrosa?": "Si" | "No";
   "¿Picoteas o comes por ansiedad entre comidas?": "Si" | "No";
-  "¿Si una vez te “salis de la dieta” pierdes el control total de las comidas?":
+  "¿Sí una vez te “salís de la dieta” pierdes el control total de las comidas?":
     | "Si"
     | "No";
-  "¿Sentís que tenes grasa abdominal acumulada y te cuesta mucho bajarla?":
+  "¿Sentís que tenés grasa abdominal acumulada, y te cuesta mucho bajarla?":
     | "Si"
     | "No";
 }
