@@ -32,10 +32,7 @@ export const Home3 = ({ reference }: Home3Options) => {
                 <br /> tus objetivos
               </h3>
               <p>
-                Podrás elegir el plan que mejor se adapte a vos y a los
-                objetivos que quieras lograr, luego te enviaré un formulario
-                donde podrás contarme sobre tus hábitos, tus consumos de
-                alimentos y que te gustaría lograr.
+              Podrás elegir el plan que mejor se adapte a vos y a los objetivos que quieras lograr; luego te enviaré un formulario donde podrás contarme sobre tus hábitos, tus consumos de alimentos y qué te gustaría lograr.
               </p>
             </div>
           </div>

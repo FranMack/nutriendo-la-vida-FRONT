@@ -24,11 +24,10 @@ export const Home4 = ({ reference }: Home4Options) => {
         <h3>PLANES</h3>
 
         <h4>
-          Elegi como queres empezar a<br /> cambiar tu vida
+          Elegí cómo querés empezar a<br /> cambiar tu vida
         </h4>
         <p>¡Elegí el plan que más se adapte a tus objetivos!</p>
         <p>
-          {" "}
           Todos los planes incluyen mediciones de porciones según tus
           requerimientos energéticos y proteicos, kit de menús saludables y
           deliciosas recetas para complementar tu cocina.

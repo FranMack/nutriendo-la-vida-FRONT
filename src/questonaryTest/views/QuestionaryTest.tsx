@@ -13,8 +13,8 @@ const quetion5:Questions={title:"¿La mayoría de los días no sabes qué comer?
 const quetion6:Questions={title:"¿Haces actividad física más de 3 veces por semana?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
 const quetion7:Questions={title:"¿Entrenas y te gustaría estar más marcada y fibrosa?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
 const quetion8:Questions={title:"¿Picoteas o comes por ansiedad entre comidas?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
-const quetion9:Questions={title:"¿Si una vez te “salis de la dieta” pierdes el control total de las comidas?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
-const quetion10:Questions={title:"¿Sentís que tenes grasa abdominal acumulada y te cuesta mucho bajarla?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
+const quetion9:Questions={title:"¿Sí una vez te “salís de la dieta” pierdes el control total de las comidas?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
+const quetion10:Questions={title:"¿Sentís que tenés grasa abdominal acumulada, y te cuesta mucho bajarla?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
 export const QuestionaryTest = () => {
 
  

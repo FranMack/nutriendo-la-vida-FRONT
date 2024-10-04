@@ -5,6 +5,7 @@ import {
 } from "../../context/shopingCart.context";
 import ebbok from "../../home/assets/ebook.webp";
 import { ScreenSizeContext } from "../../context/screenSize.context";
+import { price } from "../../config/price";
 
 export const Ebook = () => {
   useEffect(() => {
@@ -12,7 +13,7 @@ export const Ebook = () => {
   }, []);
 
   const { toggleMenu, setShopingCartItems } = useContext(ShopingCartContext);
-  const {screenWidth}=useContext(ScreenSizeContext)
+  const { screenWidth } = useContext(ScreenSizeContext);
 
   const addToShopingCart = () => {
     const shopingCartJSON = localStorage.getItem("shopingCart") || "[]";
@@ -21,7 +22,7 @@ export const Ebook = () => {
     const shopingCartNewItem: ShopingCartItemOptions = {
       id: 5,
       product: "Ebook: Preparate 1 día y come toda la semana",
-      price: 5000,
+      price: price.ebook,
       image: ebbok,
       consult: false,
       consultPrice: 0,
@@ -55,34 +56,37 @@ export const Ebook = () => {
           </div>
           <div className="plan-info-container">
             <h3>Ebook:Preparate 1 día y come toda la semana</h3>
-            <h4>{`$ 5000`}</h4>
+            <h4>{`$ ${price.ebook}`}</h4>
             <button onClick={addToShopingCart}>Agregar al carrito</button>
-           { (screenWidth<=680 || screenWidth>1024) &&<div className="text-container">
-              <h4>Descripción</h4>
-              <p>
-                De una manera simple y sencilla conseguirás tener una
-                alimentación equilibrada, comer sano la mayor parte de tus días.
-                <br /> Aprenderás a planificar tus comidas semanales y
-                realizando las compras inteligentemente para cocinar 1 día y
-                comer toda la semana.
-              </p>
-            </div>}
+            {(screenWidth <= 680 || screenWidth > 1024) && (
+              <div className="text-container">
+                <h4>Descripción</h4>
+                <p>
+                  De una manera simple y sencilla conseguirás tener una
+                  alimentación equilibrada, comer sano la mayor parte de tus
+                  días.
+                  <br /> Aprenderás a planificar tus comidas semanales y
+                  realizar las compras de manera inteligente para cocinar 1 día
+                  y comer toda la semana.
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
-        { (screenWidth>680 && screenWidth<=1024) &&<div className="text-container-horizontal-mobile">
+        {screenWidth > 680 && screenWidth <= 1024 && (
+          <div className="text-container-horizontal-mobile">
             <h5>Descripción</h5>
-              <p>
-                De una manera simple y sencilla conseguirás tener una
-                alimentación equilibrada, comer sano la mayor parte de tus días.
-                <br /> Aprenderás a planificar tus comidas semanales y
-                realizando las compras inteligentemente para cocinar 1 día y
-                comer toda la semana.
-              </p>
-            </div>}
-      
+            <p>
+              De una manera simple y sencilla conseguirás tener una alimentación
+              equilibrada, comer sano la mayor parte de tus días.
+              <br /> Aprenderás a planificar tus comidas semanales y realizando
+              las compras inteligentemente para cocinar 1 día y comer toda la
+              semana.
+            </p>
+          </div>
+        )}
       </div>
-      
     </section>
   );
 };
