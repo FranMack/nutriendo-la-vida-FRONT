@@ -12,7 +12,7 @@ export const CheckoutRoute = ({ children }: PrivateRouteProps) => {
   const [isCartLoaded, setIsCartLoaded] = useState(false); // Estado para verificar si el carrito ha sido cargado
 
   useEffect(() => {
-    const shopingCartJSON = localStorage.getItem("shopingCart");
+    const shopingCartJSON = localStorage.getItem("shopingCart") || "[]";
     if (shopingCartJSON) {
       setIsCartLoaded(true); // Cambiar el estado cuando el carrito se ha cargado
     }
