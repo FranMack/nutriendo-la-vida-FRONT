@@ -1,7 +1,11 @@
-import { useContext, useEffect, useRef } from 'react';
-import { Home1, Home2, Home3, Home4, Home4b, Home5 } from '../pages';
+import { lazy, Suspense, useContext, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MobileMenuContext } from '../../context/mobileMenuContext';
+import { Home1,Home2,Home3,Home4,Home4b,Home5 } from '../pages';
+
+
+
+
 
 export const Home = () => {
   const location = useLocation();
@@ -146,11 +150,13 @@ export const Home = () => {
 
   return (
     <main className={menuOpen ? "mobileModalOpen" : ""}>
+ 
       <Home1 />
       <Home2 reference={refHome2} />
       <Home3 reference={refHome3} />
       <Home4 reference={refHome4} />
       <Home4b reference={refHome4b} />
       <Home5 reference={refHome5} />
+    
     </main>
   )}

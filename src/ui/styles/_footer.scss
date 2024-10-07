@@ -178,12 +178,14 @@ footer{
                     color:$color_cyan;
                     font-family: $font_titles;
                    }
+                   text-align: center;
         
                     >.logo-container{
                         width: fit-content;
                         height: 70%;
                         display: flex;
                         justify-content: center;
+                      
                         img{
                             object-fit: cover;
                             height: 100%;

@@ -87,21 +87,21 @@ img{
     color:$color_orange;
     
     >.text-container{
-        width: 80%;
+        width: 85%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        row-gap: 5%;
+        row-gap: 4%;
         h4{
             font-family: $font_titles;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
          
         }
         
         h5{
-            font-size: 2rem;
-            line-height: 3.2rem;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
             font-weight: 400;
         }
         
@@ -139,7 +139,8 @@ img{
        
         padding-top: 10vh;
         margin-top: 0vh;
-        height: 100vh;
+        height: auto;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         row-gap: 5vh;

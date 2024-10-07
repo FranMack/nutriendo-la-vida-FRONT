@@ -61,6 +61,7 @@
         align-items: center;
         width: 50%;
         row-gap: 0x;
+      
         button {
           background-color: transparent;
           border: solid 2px;
@@ -69,6 +70,7 @@
           color: $color_background;
           border-radius: 5px;
           border-color: transparent;
+          font-size: 2rem;
         }
       }
     }

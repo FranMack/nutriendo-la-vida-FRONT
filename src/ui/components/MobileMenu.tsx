@@ -38,6 +38,13 @@ export const MobileMenu = () => {
     toggleMenu();
   };
 
+
+  const linkToSocialMedia=(path: string)=>{
+    window.open(path, "_blank");
+  }
+
+
+
   const { toggleMenu, menuRef } = useContext(MobileMenuContext);
 
   return (
@@ -74,7 +81,7 @@ export const MobileMenu = () => {
             <div
               key={item.title}
               className="icon-container"
-              onClick={() => linkTo(item.path)}
+              onClick={() => linkToSocialMedia(item.path)}
             >
               {item.icon}
               <small>{item.title}</small>

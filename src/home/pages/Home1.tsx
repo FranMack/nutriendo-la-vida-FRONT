@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import background from "../assets/background_home.webp";
 
-export const Home1 = () => {
+ export const Home1 = () => {
   const navigate = useNavigate();
 
   const linkToTest = () => {
@@ -28,3 +28,4 @@ export const Home1 = () => {
     </section>
   );
 };
+

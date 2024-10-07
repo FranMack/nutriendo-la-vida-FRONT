@@ -20,7 +20,7 @@ export interface ShopingCartItemOptions{
 
 
 
-export const Plan = () => {
+ const Plan = () => {
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -190,3 +190,5 @@ export const Plan = () => {
     </section>
   );
 };
+
+export default Plan

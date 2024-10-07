@@ -7,7 +7,7 @@ import ebbok from "../../home/assets/ebook.webp";
 import { ScreenSizeContext } from "../../context/screenSize.context";
 import { price } from "../../config/price";
 
-export const Ebook = () => {
+ const Ebook = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -90,3 +90,5 @@ export const Ebook = () => {
     </section>
   );
 };
+
+  export default Ebook

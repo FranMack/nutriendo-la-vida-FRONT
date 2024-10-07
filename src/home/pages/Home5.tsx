@@ -4,6 +4,7 @@ import purpleBackground from "../assets/purpleBackground.webp"
 import { ArrowLeft } from "../../assets/icons";
 import { RefObject, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LazyImage } from "../../ui/components/LazyImage";
 
 interface CarruselData {
   title: string;
@@ -64,7 +65,7 @@ export const Home5 = ({reference}:Home2Options) => {
                 </div>
             </div>
             <div  className="home-section5-internal-container right ">
-            <img src={carrusel[index].image} alt="april image" />
+            <LazyImage src={carrusel[index].image} alt="april image" />
             </div>
             <div className="arrow-container left" onClick={nextIndex}>
               <ArrowLeft/>
@@ -75,7 +76,7 @@ export const Home5 = ({reference}:Home2Options) => {
           </div>
 
           <div className="home-section5-bottom-container">
-            <img src={purpleBackground} alt="purple background" />
+            <LazyImage src={purpleBackground} alt="purple background" />
             <h5>
             ¿No sabes cual plan es el más indicado para vos?
             </h5>
@@ -89,3 +90,4 @@ export const Home5 = ({reference}:Home2Options) => {
     </section>
   );
 };
+

@@ -1,0 +1,25 @@
+@import "../../styles//variables.scss";
+
+.loading-container{
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3vh;
+    p{
+        font-size: 3rem;
+        font-weight: 400;
+        color:$color_orange
+
+    }
+}
+
+
+@media screen and (max-width: 678px) {
+    .loading-container{
+        padding-bottom: 0vh;
+    }
+}

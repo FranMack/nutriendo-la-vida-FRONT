@@ -11,7 +11,7 @@ export const MobileNavbar = () => {
   const navigate = useNavigate();
 
   const linkToHome = () => {
-    navigate("/");
+    navigate("/#home");
   };
 
   const { toggleMenu } = useContext(MobileMenuContext);
@@ -19,11 +19,11 @@ export const MobileNavbar = () => {
   const { shopingCartItems } = shopingCartContext;
   return (
     <nav className="mobile-navbar-container">
-      <div className="icon-container" onClick={() => {}}>
+      <div className="icon-container">
         <MenuIcon onClick={toggleMenu} />
       </div>
 
-      <div className="image-container">
+      <div className="image-container" onClick={linkToHome}>
         <img onClick={linkToHome} src={logoN} alt="logo-N" />
         <img onClick={linkToHome} src={logoV} alt="logo-V" />
       </div>

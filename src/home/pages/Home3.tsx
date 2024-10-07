@@ -5,17 +5,18 @@ import flower2 from "../assets/Flower.png";
 import flower from "../assets/Soft Flower.png";
 import arrowLeft from "../assets/arrow_left.png";
 import arrowRight from "../assets/arrow_right.png";
+import { LazyImage } from "../../ui/components/LazyImage";
 
 interface Home3Options {
   reference: RefObject<HTMLElement> | undefined;
 }
 
-export const Home3 = ({ reference }: Home3Options) => {
+ export const Home3 = ({ reference }: Home3Options) => {
   return (
     <section ref={reference} className="home-section3-container">
       <div className="home-section3-top-container efectoRevealOut">
-        <h3>Te cuento cÓmo empezar</h3>
-
+        <h3>Te cuento cÓmo empezar </h3>
+    
         <h4>Conocé como trabajaremos en conjunto</h4>
       </div>
 
@@ -23,7 +24,7 @@ export const Home3 = ({ reference }: Home3Options) => {
         <div className="home-section3-card-container">
           <div className="card-container-left">
             <div className="number-container">
-              <img src={flower} alt="flower" />
+              <LazyImage src={flower} alt="flower" />
               <p>01</p>
             </div>
             <div className="text-container">
@@ -32,13 +33,16 @@ export const Home3 = ({ reference }: Home3Options) => {
                 <br /> tus objetivos
               </h3>
               <p>
-              Podrás elegir el plan que mejor se adapte a vos y a los objetivos que quieras lograr; luego te enviaré un formulario donde podrás contarme sobre tus hábitos, tus consumos de alimentos y qué te gustaría lograr.
+                Podrás elegir el plan que mejor se adapte a vos y a los
+                objetivos que quieras lograr, luego te enviaré un formulario
+                donde podrás contarme sobre tus hábitos, tus consumos de
+                alimentos y que te gustaría lograr.
               </p>
             </div>
           </div>
           <div className="card-container-right">
             <div className="arrow-container">
-              <img src={arrowRight} alt="arrow" />
+              <LazyImage src={arrowRight} alt="arrow" />
               <p>02</p>
             </div>
           </div>
@@ -47,14 +51,14 @@ export const Home3 = ({ reference }: Home3Options) => {
         <div className="home-section3-card-container right">
           <div className="card-container-right">
             <div className="arrow-container">
-              <img src={arrowLeft} alt="arrow" />
+              <LazyImage src={arrowLeft} alt="arrow" />
               <p>02</p>
             </div>
           </div>
 
           <div className="card-container-left">
             <div className="number-container">
-              <img src={asterix} alt="flower" />
+              <LazyImage src={asterix} alt="flower" />
               <p>02</p>
             </div>
             <div className="text-container">
@@ -74,7 +78,7 @@ export const Home3 = ({ reference }: Home3Options) => {
         <div className="home-section3-card-container">
           <div className="card-container-left">
             <div className="number-container">
-              <img src={flower2} alt="flower" />
+              <LazyImage src={flower2} alt="flower" />
               <p>03</p>
             </div>
             <div className="text-container">
@@ -97,3 +101,5 @@ export const Home3 = ({ reference }: Home3Options) => {
     </section>
   );
 };
+
+

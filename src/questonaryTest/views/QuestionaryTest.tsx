@@ -15,7 +15,7 @@ const quetion7:Questions={title:"¿Entrenas y te gustaría estar más marcada y 
 const quetion8:Questions={title:"¿Picoteas o comes por ansiedad entre comidas?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
 const quetion9:Questions={title:"¿Sí una vez te “salís de la dieta” pierdes el control total de las comidas?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
 const quetion10:Questions={title:"¿Sentís que tenés grasa abdominal acumulada, y te cuesta mucho bajarla?",options:[{choice:"Si",selected:false},{choice:"No",selected:false},]}
-export const QuestionaryTest = () => {
+const QuestionaryTest = () => {
 
  
   
@@ -82,3 +82,5 @@ export const QuestionaryTest = () => {
     </section>
   )
 }
+
+export default QuestionaryTest

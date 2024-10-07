@@ -7,7 +7,7 @@ import { ShopingCartContext } from "../../context/shopingCart.context";
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const TestResult = () => {
+const TestResult = () => {
 
 
   const navigate = useNavigate();
@@ -152,3 +152,5 @@ export const TestResult = () => {
     </section>
   )
 }
+
+export default TestResult
