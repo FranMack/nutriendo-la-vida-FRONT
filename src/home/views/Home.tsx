@@ -1,21 +1,17 @@
-import { lazy, Suspense, useContext, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import { MobileMenuContext } from '../../context/mobileMenuContext';
-import { Home1,Home2,Home3,Home4,Home4b,Home5 } from '../pages';
-
-
-
-
+import { useContext, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import { MobileMenuContext } from "../../context/mobileMenuContext";
+import { Home1, Home2, Home3, Home4, Home4b, Home5 } from "../pages";
 
 export const Home = () => {
   const location = useLocation();
-  
+
   useEffect(() => {
     localStorage.removeItem("test");
     if (location.hash) {
       const element = document.getElementById(location.hash.substring(1));
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [location]);
@@ -39,7 +35,9 @@ export const Home = () => {
       const home5 = refHome5.current;
 
       if (home2) {
-        const [home2Left, home2Right] = Array.from(home2.childNodes) as HTMLElement[];
+        const [home2Left, home2Right] = Array.from(
+          home2.childNodes
+        ) as HTMLElement[];
         const topCoordinates = home2.getBoundingClientRect().top;
         if (home2Left && home2Right) {
           if (topCoordinates * 2 < triggerBottom) {
@@ -53,7 +51,9 @@ export const Home = () => {
       }
 
       if (home3) {
-        const [home3Top, home3Bottom] = Array.from(home3.childNodes) as HTMLElement[];
+        const [home3Top, home3Bottom] = Array.from(
+          home3.childNodes
+        ) as HTMLElement[];
         if (home3Top) {
           const topCoordinates = home3Top.getBoundingClientRect().top;
           if (topCoordinates < triggerBottom) {
@@ -66,7 +66,9 @@ export const Home = () => {
         }
 
         if (home3Bottom) {
-          const [home3Bottom1, home3Bottom2, home3Bottom3] = Array.from(home3Bottom.childNodes) as HTMLElement[];
+          const [home3Bottom1, home3Bottom2, home3Bottom3] = Array.from(
+            home3Bottom.childNodes
+          ) as HTMLElement[];
           if (home3Bottom1) {
             const topCoordinates = home3Bottom1.getBoundingClientRect().top;
             if (topCoordinates < triggerBottom) {
@@ -97,7 +99,9 @@ export const Home = () => {
       }
 
       if (home4) {
-        const [home4Top, home4Bottom] = Array.from(home4.childNodes) as HTMLElement[];
+        const [home4Top, home4Bottom] = Array.from(
+          home4.childNodes
+        ) as HTMLElement[];
         if (home4Top) {
           const topCoordinates = home4Top.getBoundingClientRect().top;
           if (topCoordinates < triggerBottom) {
@@ -120,7 +124,9 @@ export const Home = () => {
       }
 
       if (home4b) {
-        const [home4bLeft, home4bRight] = Array.from(home4b.childNodes) as HTMLElement[];
+        const [home4bLeft, home4bRight] = Array.from(
+          home4b.childNodes
+        ) as HTMLElement[];
         const topCoordinates = home4b.getBoundingClientRect().top;
         if (home4bLeft && home4bRight) {
           if (topCoordinates * 2 < triggerBottom) {
@@ -150,13 +156,12 @@ export const Home = () => {
 
   return (
     <main className={menuOpen ? "mobileModalOpen" : ""}>
- 
       <Home1 />
       <Home2 reference={refHome2} />
       <Home3 reference={refHome3} />
       <Home4 reference={refHome4} />
       <Home4b reference={refHome4b} />
       <Home5 reference={refHome5} />
-    
     </main>
-  )}
+  );
+};
