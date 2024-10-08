@@ -47,7 +47,7 @@ export const Footer = () => {
             <h6>CONTACTO</h6>
             <div className="info-container-item" onClick={linkToMail}>
               <MailIcon />
-              <p>nutriendolavida.salud@gmail.com</p>
+              <p>abril@nutriendolavida.fit</p>
             </div>
             <div className="info-container-item" onClick={linkToWhasap}>
               <WhatsUpIcon />
