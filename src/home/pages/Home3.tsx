@@ -84,14 +84,10 @@ interface Home3Options {
             <div className="text-container">
               <h3>
               Conversamos sobre cómo 
-                <br /> adaptar el plan a tu rutina diaria.
+                 adaptar el plan a tu rutina diaria.
               </h3>
               <p>
-                Podrás elegir que la explicación del plan sea por videollamada
-                en donde comentaremos a detalle,
-                despejando tus dudas y donde te dare tips y sugerencias para que
-                logres una excelente conexión con la nueva manera de vivir que
-                te espera.
+              Podrás optar por una videollamada en la que revisaremos el plan en detalle, despejando tus dudas y brindándote sugerencias para lograr una excelente conexión con la nueva forma de vivir que te espera
               </p>
             </div>
           </div>
