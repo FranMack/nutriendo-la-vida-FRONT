@@ -113,6 +113,7 @@ export const Checkout = () => {
         );
         localStorage.removeItem("shopingCart");
         window.location.href = createOrder.data.link_de_pago;
+        setShopingCartItems([])
       } catch (error) {
         console.log(error);
       }
