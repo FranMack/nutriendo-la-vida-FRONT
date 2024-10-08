@@ -18,10 +18,11 @@ export const Home4b = ({ reference }: Home4bOptions) => {
         <div className="text-container">
           <h4>
             Ebook:
-            <br /> Preparate 1 dia y disfruta toda la semana.
+            <br /> Prepárate 1 día y disfrútalo toda la semana.
           </h4>
           <h5>
-            Cocina 1 dia y come toda la semana.
+           <strong>Incluye:</strong> 
+            <br />Cocina 1 dia y come toda la semana.
             <br /> Guía para comprar en el super y ahorrar dinero.
             <br />  Recetario.
           </h5>

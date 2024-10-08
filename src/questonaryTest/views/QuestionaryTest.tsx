@@ -57,9 +57,9 @@ const QuestionaryTest = () => {
   return (
     <section className='questionary-container leftReveal'>
       { step===0 && <> <h2>¡Hola<br/>
-¿No sabes cual plan es el más adecuado para vos?
+¿No sabés cual plan es el más adecuado para vos?
 </h2>
-<h3>Con estas simples preguntas puedo ayudarte, no te va a llevar más de 5 minutos!</h3>
+<h3>Con estas simples preguntas puedo ayudarte, no te va a llevar más de 1 minuto</h3>
 <button onClick={nextStep}>Empezar test</button>
 <button className='button-trasparente' onClick={linkToHome}>Volver al inicio</button></>}
 

@@ -18,21 +18,19 @@ interface Home2Options {
           <h4>
             Soy Abril Sack, especialista
             <br /> en nutrición para la salud
-            <br /> hormonal de la mujer.
+            <br />de la mujer.
           </h4>
           <p>
-            Como licenciada en nutrición mi enfoque se centra en mujeres desde
-            30 años en adelante que quieren tener una mejor relación con la
-            comida y que van más allá de la dieta convencional que
-            nos permite una mejor adherencia a largo plazo sin efecto rebote.
+          Como licenciada en nutrición, mi enfoque está dirigido a mujeres de 30 años en adelante que desean mejorar su relación con la comida, y buscan algo más que las dietas convencionales.
           </p>
           <p>
-            Me gustaría enseñarte a vivir una vida saludable sin restricciones
-            para que puedas sentirte tú misma y brindarte herramientas que te
-            permitan tener el cuerpo que deseas y la salud que te mereces.
+          Mi objetivo es ayudarte a adoptar hábitos sostenibles que permitan una mejor adherencia a largo plazo, evitando el temido efecto rebote. Quiero enseñarte a vivir de manera saludable sin restricciones, para que puedas sentirte auténtica y brindarte las herramientas necesarias para lograr el cuerpo que deseas y la salud que mereces.
           </p>
         </div>
       </div>
     </section>
   );
 };
+
+
+

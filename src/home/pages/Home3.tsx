@@ -34,7 +34,7 @@ interface Home3Options {
               </h3>
               <p>
                 Podrás elegir el plan que mejor se adapte a vos y a los
-                objetivos que quieras lograr, luego te enviaré un formulario
+                objetivos que quieras lograr, luego te enviaré un formulario para completar,
                 donde podrás contarme sobre tus hábitos, tus consumos de
                 alimentos y que te gustaría lograr.
               </p>
@@ -83,12 +83,12 @@ interface Home3Options {
             </div>
             <div className="text-container">
               <h3>
-                Charlamos sobre cómo
-                <br /> adaptar el plan a tu día a día
+              Conversamos sobre cómo 
+                <br /> adaptar el plan a tu rutina diaria.
               </h3>
               <p>
                 Podrás elegir que la explicación del plan sea por videollamada
-                en donde comentaremos juntas cada parte del plan a detalle,
+                en donde comentaremos a detalle,
                 despejando tus dudas y donde te dare tips y sugerencias para que
                 logres una excelente conexión con la nueva manera de vivir que
                 te espera.

@@ -27,7 +27,7 @@ const carrusel: CarruselData[] = [
   {
     title: "Imagina donde llegarás si",
     secundaryTitle: "comienzas hoy.",
-    text: "¡Enamorate del proceso y los resultados llegarán!",
+    text: "¡Enamoráte del proceso y los resultados llegarán!",
     image: carrousel2,
   },
   
@@ -78,10 +78,10 @@ export const Home5 = ({reference}:Home2Options) => {
           <div className="home-section5-bottom-container">
             <LazyImage src={purpleBackground} alt="purple background" />
             <h5>
-            ¿No sabes cual plan es el más indicado para vos?
+            ¿No sabés cual plan es el más indicado para vos?
             </h5>
             <h6>
-            ¡Con estas simples preguntas puedo ayudarte!. Lleva menos de 1 minuto
+            Con estas simples preguntas puedo ayudarte. Lleva menos de 1 minuto
             </h6>
 
             <button onClick={linkToTest}>Hacer el test</button>

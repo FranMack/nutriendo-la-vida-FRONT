@@ -27,7 +27,7 @@ export const plans: PlanOptions[] = [
   {
     title: "Alimentación y rendimiento deportivo",
     items: [
-      "Mejorarás tu rendimiento deportivo cada día para aumentar tus músculos de manera natural, entrenando y alimentándote según tu cuerpo..",
+      "Mejorarás tu rendimiento deportivo cada día para aumentar tus músculos de manera natural, entrenando y alimentándote según tu cuerpo.",
     ],
     price: price.plan,
     color: "#ae5e2d",
@@ -37,7 +37,7 @@ export const plans: PlanOptions[] = [
   {
     title: "Cómo crear buenos hábitos alimenticios",
     items: [
-      "Lograrás modificar y sostener hábitos en viajes, vacaciones, eventos sociales estableciendo prioridades, sin limitaciones y llegando a tus objetivos.",
+      "Lograrás modificar y sostener hábitos en viajes, vacaciones, eventos sociales, estableciendo prioridades, sin limitaciones y llegando a tus objetivos.",
     ],
     price: price.plan,
     color: "#178781",
@@ -47,7 +47,7 @@ export const plans: PlanOptions[] = [
   {
     title: "Alimentación en pre y post menopausia",
     items: [
-      "Alcanzarás un déficit calórico para potenciar la pérdida de grasa, trabajando tus hormonas con los alimentos para prevenir los síntomas y sentirte mejor en esta etapa.",
+      "Lograrás un déficit calórico que potenciará la pérdida de grasa, mientras equilibras tus hormonas a través de la alimentación, ayudando a prevenir los síntomas y mejorando tu bienestar en esta etapa.",
     ],
     price: price.plan,
     color: "#7d5aa4",
