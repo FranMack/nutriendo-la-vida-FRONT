@@ -1,5 +1,5 @@
-export const price={
-    plan:15,
-    consult:5,
-    ebook:15
-}
+export const price = {
+  plan: 14999,
+  consult: 10000,
+  ebook: 4999,
+};
