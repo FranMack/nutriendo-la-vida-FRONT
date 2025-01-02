@@ -15,10 +15,15 @@ import { Loading } from "./ui/page/Loading";
 
 const Plan = lazy(() => import("./Plans/views/Plan"));
 const Ebook = lazy(() => import("./Plans/views/Ebook"));
+const DetoxEbook = lazy(() => import("./Plans/views/DetoxEbook"));
 const TestResult = lazy(() => import("./Plans/views/TestResult"));
 const QuestionaryTest = lazy(
   () => import("./questonaryTest/views/QuestionaryTest")
 );
+
+
+
+
 function App() {
   const { shopingCartOpen, setShopingCartItems } =
     useContext(ShopingCartContext);
@@ -105,6 +110,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <Ebook />
+            </Suspense>
+          }
+        />
+          <Route
+          path="/reto-detox"
+          element={
+            <Suspense fallback={<Loading />}>
+              <DetoxEbook />
             </Suspense>
           }
         />

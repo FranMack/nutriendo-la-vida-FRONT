@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { MobileMenuContext } from "../../context/mobileMenuContext";
+import { PromotionalBanner } from "../components/PromotionalBanner";
 import { Home1, Home2, Home3, Home4, Home4b, Home5 } from "../pages";
 
 export const Home = () => {
@@ -157,6 +158,7 @@ export const Home = () => {
   return (
     <main className={menuOpen ? "mobileModalOpen" : ""}>
       <Home1 />
+      <PromotionalBanner />
       <Home2 reference={refHome2} />
       <Home3 reference={refHome3} />
       <Home4 reference={refHome4} />
