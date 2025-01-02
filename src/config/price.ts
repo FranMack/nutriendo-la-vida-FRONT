@@ -1,6 +1,6 @@
 export const price = {
-  plan: 17,
-  consult: 5,
-  ebook: 16,
-  detoxChallenge: 15,
+  plan: 15000,
+  consult: 5000,
+  ebook: 5000,
+  detoxChallenge: 10000,
 };
